@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FormProcess [] >
+  <PackageEntry>
+    <FormProcess
+        appearsInHistory="true"
+        cyclic="false"
+        designNotes="Undefined"
+        exceptionStrategy="1"
+        icon=""
+        isPrivate="false"
+        logicalDatabaseConnection=""
+        name="FormProcessQuestionPopup"
+        nested="false"
+        pointOfNoReturn="false"
+        transactionBehaviour="TX_NOT_SUPPORTED"
+        version="10"
+        waitOnChildren="false">
+      <InstanceFields>
+        <ObjectField
+            isAggregate="false"
+            isAttribute="false"
+            name="formHolder">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="GTFormHolderControl"
+              nested="false" />
+        </ObjectField>
+        <FormField
+            isAggregate="false"
+            isAttribute="false"
+            name="form">
+          <FormField_loc
+              locale="">
+            <Format />
+          </FormField_loc>
+          <TypeDefinitionReference
+              name="FormProcessQuestionPopupForm"
+              nested="false" />
+        </FormField>
+      </InstanceFields>
+      <Form
+          name="FormProcessQuestionPopupForm"
+          nested="true" />
+      <StartNode
+          displayName=""
+          name=""
+          x="22"
+          y="32" />
+      <EndNode
+          displayName=""
+          name=""
+          x="246"
+          y="32" />
+      <PopupQuestionNode
+          displayName=""
+          name="invalidUsername"
+          question="Error"
+          text="The usename is not valid"
+          x="182"
+          y="32">
+        <PositiveButton
+            text="OK" />
+        <NegativeButton
+            text="" />
+        <Result
+            from=""
+            name=".result"
+            to="" />
+      </PopupQuestionNode>
+      <Transition
+          isExceptionTransition="false">
+        <StartNodeReference
+            name="" />
+        <ToNode
+            name="invalidUsername" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="134"
+              y="32" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false"
+          name="transition0">
+        <FromNode
+            name="invalidUsername" />
+        <EndNodeReference
+            name="" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="208"
+              y="32" />
+        </GraphNodeList>
+      </Transition>
+      <Parameter
+          from=""
+          name="formHolder"
+          to="" />
+      <BuilderInfo
+          name="" />
+      <TopicScope
+          defineTopicScope="false"
+          name="" />
+      <FormReference
+          name="FormProcessQuestionPopupForm"
+          nested="false" />
+    </FormProcess>
+  </PackageEntry>

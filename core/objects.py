@@ -26,6 +26,7 @@ class BaseProcessDefinition(object):
         self.tree =tree
         self.root = tree.getroot()
         self.filepath=filepath
+        self.doc_type = "ProcessDefinition"
 
     def iter(self,node_name):
         return self.root.iter(node_name)
@@ -71,12 +72,42 @@ class BaseProcessDefinition(object):
 
     def save(self):
         header=('<?xml version="1.0" encoding="UTF-8"?>\n'
-                '<!DOCTYPE ProcessDefinition [] >\n')
+                '<!DOCTYPE '+self.doc_type+' [] >\n')
         indent(self.root,2)
         root_str=ET.tostring(self.root,encoding='unicode')
         xml_doc=header +root_str
         with open(self.filepath,"w") as xml_file:
             xml_file.write(xml_doc)
+
+class FormProcess(BaseProcessDefinition):
+    def __init__(self,tree=None,filepath=None):
+        super().__init__(tree)
+        self.process_definition = self.root.find("ProcessDefinition")
+    def add_packages(self,path_array,package_specifier):
+        del path_array[-1]
+        for packagename in path_array:
+            ET.SubElement(package_specifier,
+                          "PackageName",
+                          name=packagename)
+
+    def add_package_specifier(self,import_declaration,path_array,name):
+        package_specifier =ET.SubElement(import_declaration,
+                  "PackageSpecifier",
+                  name="")
+        self.add_packages(path_array,package_specifier)
+
+    def add_import(self,path,name=None):
+        path_array= path.split(".")
+        if not name:
+            name =path_array[-1]
+        import_declaration =ET.Element("ImportDeclaration",
+                                       name=name)
+        self.add_package_specifier(import_declaration,path_array,name)
+        ET.SubElement(import_declaration,
+                      "PackageEntryReference",
+                      name=name)
+        indent(import_declaration,2)
+        self.root.insert(0,import_declaration)
 
 class ProcessDefinition(BaseProcessDefinition):
     def __init__(self,tree=None,filepath=None):
@@ -100,7 +131,12 @@ class ProcessDefinition(BaseProcessDefinition):
 class PackageEntry(BaseProcessDefinition):
     def __init__(self,tree=None,filepath=None):
         super().__init__(tree)
-        self.process_definition = self.root.find("ProcessDefinition")
+        process_definition = self.root.find("ProcessDefinition")
+        if  process_definition:
+            self.process_definition =process_definition
+        else:
+            self.process_definition = self.root.find("FormProcess")
+            self.doc_type ="FormProcess"
 
     def add_packages(self,path_array,package_specifier):
         del path_array[-1]

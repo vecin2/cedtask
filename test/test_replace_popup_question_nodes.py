@@ -130,5 +130,49 @@ def test_replace_inner_process(fs):
     main_process = SourceObjectParser().parse(main)
     assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in main_process.imports()
     assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[1]
-    #package_entry = SourceObjectParser().parse(main)
-    #assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in package_entry.imports()
+
+
+def test_replace_error_popup(fs):
+    logger = FakeLogger()
+    source=full_path("processExamples/SimpleValidationErrorQuestionPopup.xml")
+    fs.add_real_file(source,read_only=False)
+    package_entry = SourceObjectParser().parse(source)
+    popupquestion =  package_entry.process_definition.find("PopupQuestionNode")
+    assert "Error" == popupquestion.get("question")
+
+    replace(logger,os.path.dirname(source))
+
+    package_entry = SourceObjectParser().parse(source)
+    data_flow = package_entry.process_definition.find("DataFlow")
+    assert "fieldStore0" == data_flow.find("FromNode").get("name")
+    assert "noCustomersFound" == data_flow.find("ToNode").get("name")
+    data_flow_entries=data_flow.findall("DataFlowEntry")
+    line1_from = data_flow_entries[0].find("FromField")
+    parameter_assigment =line1_from.find("ParameterAssignment")
+    assert "0" == parameter_assigment.get("exceptionStrategy")
+    assert "EcmaScript" == parameter_assigment.get("language")
+    assert "" == parameter_assigment.get("name")
+    assert "" == parameter_assigment.get("version")
+    verbatim =parameter_assigment.find("Verbatim")
+    assert "text" == verbatim.get("fieldName")
+    assert '"The search criteria retrieved no Customers"' ==\
+            verbatim.text.strip()
+    message_type = data_flow_entries[1].find("FromField")
+    parameter_assigment =message_type.find("ParameterAssignment")
+    assert "0" == parameter_assigment.get("exceptionStrategy")
+    assert "EcmaScript" == parameter_assigment.get("language")
+    assert "" == parameter_assigment.get("name")
+    assert "" == parameter_assigment.get("version")
+    verbatim =parameter_assigment.find("Verbatim")
+    assert "text" == verbatim.get("fieldName")
+    assert 'MessageDialog.ERROR_TYPE' ==\
+            verbatim.text.strip()
+
+def test_replace_formProcess_popup(fs):
+    logger = FakeLogger()
+    source=full_path("processExamples/FormProcessQuestionPopup.xml")
+    fs.add_real_file(source,read_only=False)
+    package_entry = SourceObjectParser().parse(source)
+    popupquestion =  package_entry.process_definition.find("PopupQuestionNode")
+    assert "Error" == popupquestion.get("question")
+

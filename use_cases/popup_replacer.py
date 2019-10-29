@@ -61,7 +61,9 @@ class PopupReplacer(SourceCodeVisitor):
     def visit_ProcessDefinition(self,process_def):
         self.result.extend(ProcessDefinitionPopupReplacer(process_def).replaceall())
         return self.result
-
+    def visit_FormProcess(self,form_process):
+        self.result.extend(FormProcessPopupReplacer(form_process).replaceall())
+        return self.result
 
 class BasePopupReplacer(object):
     def __init__(self,base_process_definition):
@@ -123,6 +125,15 @@ class BasePopupReplacer(object):
         question_type =popup_question_node.get("question")
         if question_type =="Information":
             return "MessageDialog.INFORMATION_TYPE"
+        elif question_type=="Error":
+            return "MessageDialog.ERROR_TYPE"
+
+class FormProcessPopupReplacer(BasePopupReplacer):
+    def __init__(self,base_process_definition):
+        super().__init__(base_process_definition)
+
+    def import_new_popup(self):
+        self.base_process_def.add_import("FrameworkCommon.API.PopUpQuestion.MessageDialog")
 
 class ProcessDefinitionPopupReplacer(BasePopupReplacer):
     def __init__(self,base_process_definition):
