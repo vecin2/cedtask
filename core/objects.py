@@ -82,7 +82,7 @@ class BaseProcessDefinition(object):
 class FormProcess(BaseProcessDefinition):
     def __init__(self,tree=None,filepath=None):
         super().__init__(tree)
-        self.process_definition = self.root.find("ProcessDefinition")
+        self.process_definition = self.root
     def add_packages(self,path_array,package_specifier):
         del path_array[-1]
         for packagename in path_array:

@@ -8,32 +8,29 @@
       icon=""
       isPrivate="false"
       logicalDatabaseConnection=""
-      name="ValidationProcess"
+      name="SubValidationProcess"
       nested="false"
       pointOfNoReturn="false"
       transactionBehaviour="TX_NOT_SUPPORTED"
       version="10"
       waitOnChildren="false">
-    <ProcessDefinition
-        name="SubValidationProcess"
-        nested="true" />
     <StartNode
         displayName=""
         name=""
-        x="16"
+        x="22"
         y="32" />
     <EndNode
         displayName=""
         name=""
-        x="240"
+        x="272"
         y="32" />
     <PopupQuestionNode
         displayName=""
-        name="accountInvalid"
+        name="expiredAgreement"
         question="Information"
-        text="The account is no longer valid"
-        x="159"
-        y="154">
+        text="This agreement has expired"
+        x="182"
+        y="32">
       <PositiveButton
           text="OK" />
       <NegativeButton
@@ -47,6 +44,24 @@
         isExceptionTransition="false">
       <StartNodeReference
           name="" />
+      <ToNode
+          name="expiredAgreement" />
+      <GraphNodeList
+          name="">
+        <GraphNode
+            icon=""
+            isLabelHolder="true"
+            label=""
+            name=""
+            x="134"
+            y="32" />
+      </GraphNodeList>
+    </Transition>
+    <Transition
+        isExceptionTransition="false"
+        name="transition0">
+      <FromNode
+          name="expiredAgreement" />
       <EndNodeReference
           name="" />
       <GraphNodeList
@@ -56,7 +71,7 @@
             isLabelHolder="true"
             label=""
             name=""
-            x="128"
+            x="240"
             y="32" />
       </GraphNodeList>
     </Transition>
