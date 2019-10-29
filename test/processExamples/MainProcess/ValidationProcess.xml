@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProcessDefinition [] >
+  <ProcessDefinition
+      appearsInHistory="true"
+      cyclic="false"
+      designNotes="Undefined"
+      exceptionStrategy="1"
+      icon=""
+      isPrivate="false"
+      logicalDatabaseConnection=""
+      name="ValidationProcess"
+      nested="false"
+      pointOfNoReturn="false"
+      transactionBehaviour="TX_NOT_SUPPORTED"
+      version="10"
+      waitOnChildren="false">
+    <ProcessDefinition
+        name="SubValidationProcess"
+        nested="true" />
+    <StartNode
+        displayName=""
+        name=""
+        x="16"
+        y="32" />
+    <EndNode
+        displayName=""
+        name=""
+        x="240"
+        y="32" />
+    <Transition
+        isExceptionTransition="false">
+      <StartNodeReference
+          name="" />
+      <EndNodeReference
+          name="" />
+      <GraphNodeList
+          name="">
+        <GraphNode
+            icon=""
+            isLabelHolder="true"
+            label=""
+            name=""
+            x="128"
+            y="32" />
+      </GraphNodeList>
+    </Transition>
+    <BuilderInfo
+        name="" />
+    <TopicScope
+        defineTopicScope="false"
+        name="" />
+  </ProcessDefinition>

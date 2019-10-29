@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProcessDefinition [] >
+<PackageEntry>
+      <ImportDeclaration name="MessageDialog">
+        <PackageSpecifier name="">
+          <PackageName name="FrameworkCommon" />
+          <PackageName name="API" />
+          <PackageName name="PopUpQuestion" />
+        </PackageSpecifier>
+        <PackageEntryReference name="MessageDialog" />
+      </ImportDeclaration>
+      <ImportDeclaration name="MessageDialog">
+        <PackageSpecifier name="">
+          <PackageName name="FrameworkCommon" />
+          <PackageName name="API" />
+          <PackageName name="PopUpQuestion" />
+        </PackageSpecifier>
+        <PackageEntryReference name="MessageDialog" />
+      </ImportDeclaration>
+      <ProcessDefinition appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="MultiplePopups" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
+        <StartNode displayName="" name="" x="22" y="32" />
+        <EndNode displayName="" name="" x="368" y="32" />
+        <ChildProcess displayName="" executeAsAsynchronous="false" name="recordCancelled" waitOnParent="false" x="112" y="32">
+          <ProcessDefinitionReference name="MessageDialog" />
+        </ChildProcess>
+        <ChildProcess displayName="" executeAsAsynchronous="false" name="recordClosed" waitOnParent="false" x="240" y="32">
+          <ProcessDefinitionReference name="MessageDialog" />
+        </ChildProcess>
+        <Transition isExceptionTransition="false">
+          <StartNodeReference name="" />
+          <ToNode name="recordCancelled" />
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="64" y="32" />
+          </GraphNodeList>
+        </Transition>
+        <Transition isExceptionTransition="false" name="transition0">
+          <FromNode name="recordCancelled" />
+          <ToNode name="recordClosed" />
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="176" y="32" />
+          </GraphNodeList>
+        </Transition>
+        <Transition isExceptionTransition="false" name="transition1">
+          <FromNode name="recordClosed" />
+          <EndNodeReference name="" />
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="304" y="32" />
+          </GraphNodeList>
+        </Transition>
+        <BuilderInfo name="" />
+        <TopicScope defineTopicScope="false" name="" />
+        <ThisNode displayName="" name="fieldStore0" x="62" y="112" />
+        <DataFlow>
+          <FromNode name="fieldStore0" />
+          <ToNode name="recordCancelled" />
+          <DataFlowEntry>
+            <FromField>
+              <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
+                <Verbatim fieldName="text"><![CDATA["Unable to edit this record because it's already cancelled"]]></Verbatim>
+              </ParameterAssignment>
+            </FromField>
+            <ToField>
+              <FieldDefinitionReference name="line1" />
+            </ToField>
+          </DataFlowEntry>
+          <DataFlowEntry>
+            <FromField>
+              <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
+                <Verbatim fieldName="text"><![CDATA[MessageDialog.INFORMATION_TYPE]]></Verbatim>
+              </ParameterAssignment>
+            </FromField>
+            <ToField>
+              <FieldDefinitionReference name="messageType" />
+            </ToField>
+          </DataFlowEntry>
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="112" y="112" />
+          </GraphNodeList>
+        </DataFlow>
+        <ThisNode displayName="" name="fieldStore0" x="190" y="112" />
+        <DataFlow>
+          <FromNode name="fieldStore0" />
+          <ToNode name="recordClosed" />
+          <DataFlowEntry>
+            <FromField>
+              <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
+                <Verbatim fieldName="text"><![CDATA["Unable to edit record, it's already closed"]]></Verbatim>
+              </ParameterAssignment>
+            </FromField>
+            <ToField>
+              <FieldDefinitionReference name="line1" />
+            </ToField>
+          </DataFlowEntry>
+          <DataFlowEntry>
+            <FromField>
+              <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
+                <Verbatim fieldName="text"><![CDATA[MessageDialog.INFORMATION_TYPE]]></Verbatim>
+              </ParameterAssignment>
+            </FromField>
+            <ToField>
+              <FieldDefinitionReference name="messageType" />
+            </ToField>
+          </DataFlowEntry>
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="240" y="112" />
+          </GraphNodeList>
+        </DataFlow>
+      </ProcessDefinition>
+    </PackageEntry>
+    

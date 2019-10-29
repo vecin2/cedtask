@@ -1,0 +1,2449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Form [] >
+  <Form
+      autoSizePopupHeight="false"
+      autoSizePopupWidth="false"
+      centred="true"
+      closable="true"
+      designNotes="KARINA MCGURN V6V7UPGRADE&#10;&#10;Adding DatePicker to form"
+      events="1"
+      iconisable="true"
+      lockOnAction="false"
+      mainWindow="false"
+      maximisable="true"
+      maximiseOnStart="false"
+      modal="false"
+      name="ACCT_viewAccountAnalysisForm"
+      naturalSizeTabImage="false"
+      resizable="true"
+      screenRelative="false"
+      staticForm="true"
+      version="10">
+    <TranslationCatalogueKey
+        key=""
+        namespace="" />
+    <Form_loc
+        backgroundImage=""
+        formClassName=""
+        height="415"
+        hintText=""
+        iconSource=""
+        locale=""
+        naturalSizeTabImage="false"
+        padding="0"
+        scriptText=""
+        shortTitle=" View Account Analysis"
+        title=" View Account Analysis"
+        titleAlignment="CENTRE"
+        useTabButton="false"
+        useTabImage="false"
+        width="785"
+        xCoord="0"
+        yCoord="0">
+      <FontTagReference />
+    </Form_loc>
+    <Pane
+        enforceMinimumHeight="false"
+        enforceMinimumWidth="false"
+        name="pane0">
+      <Pane_loc
+          height="415"
+          locale=""
+          minimumHeight="0"
+          minimumWidth="0"
+          width="785" />
+      <GraphicBox
+          depthOrder="0"
+          events="0"
+          movable="true"
+          name="Graphic"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="dIycojyysS91hfImc7tQr6"
+            namespace="pacificorp_Auto" />
+        <GraphicBox_loc
+            borderThickness="1"
+            height="114"
+            hideBorder="false"
+            hintText=""
+            locale=""
+            scriptText=""
+            threeDEffect="true"
+            title=""
+            width="136"
+            xCoord="631"
+            yCoord="233">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </GraphicBox_loc>
+      </GraphicBox>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="1"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_1"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="GGA7L515RQ3g8S4I1wn2fA"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="40"
+            hideBorder="false"
+            hintText="Refresh"
+            imageSource="Restore1"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="40"
+            xCoord="30"
+            yCoord="10">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="2"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_2"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="Xy8WXEaroy9coceyoIShA6"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="40"
+            hideBorder="false"
+            hintText="Site Information"
+            imageSource="Site1"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="40"
+            xCoord="650"
+            yCoord="12">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <TextLabel
+          depthOrder="3"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_23"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="Ly6kXwrdaFAwMAxzUfU9f9"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="To"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="15"
+            xCoord="653"
+            yCoord="292">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextLabel
+          depthOrder="4"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_26"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="VLnPYbcBY35QOpHnRCRGT6"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="From"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="30"
+            xCoord="638"
+            yCoord="253">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextLabel
+          depthOrder="5"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_28"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="Ml2cto4XkQ8TXt9baBYad6"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Date Range Display"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="111"
+            xCoord="643"
+            yCoord="216">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="6"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_3"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="iFxwb7PHS4Aj3dxX3VjSQ9"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="40"
+            hideBorder="false"
+            hintText="ToolBar"
+            imageSource="ToolbarNew"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="40"
+            xCoord="161"
+            yCoord="10">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="7"
+          events="8"
+          imageButton="false"
+          movable="true"
+          name="component_30"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="GPeHEIqDT47u3yg13IWXx9"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="23"
+            hideBorder="false"
+            hintText=""
+            label="GO"
+            locale=""
+            mnemonic="G"
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="true"
+            verticalTextAlignment="CENTRE"
+            width="30"
+            xCoord="684"
+            yCoord="316">
+          <ForegroundColour />
+          <BackgroundColour
+              name="MAButton" />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <TextLabel
+          depthOrder="8"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_31"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="Wh1SUYMMsK86k5INvV9zi5"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Transaction Type Filter"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="131"
+            xCoord="10"
+            yCoord="358">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextField
+          checkSpelling="false"
+          columns="17"
+          depthOrder="9"
+          eagerUpdate="false"
+          events="0"
+          horizontalScroll="false"
+          maxLength="16"
+          movable="true"
+          name="txtTransactionType"
+          readOnly="false"
+          required="false"
+          resizable="true"
+          rows="1"
+          secret="false"
+          showAs=""
+          showHtmlContent="SAFE"
+          verticalScroll="false"
+          wrapText="true">
+        <RepresentationReference
+            name="GeckoTextField"
+            platform="Gecko" />
+        <TranslationCatalogueKey
+            key="lVQO2AWd5m4FttSMfB7kt6"
+            namespace="pacificorp_Auto" />
+        <TextField_loc
+            autoSelect="false"
+            automaticTab="false"
+            clientValidate=""
+            errorMessageValidation=""
+            explainValidation="false"
+            height="19"
+            hideBorder="false"
+            hintText=""
+            invisible="false"
+            isPerlTypeValidation="false"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            textCase="INITIAL"
+            width="123"
+            xCoord="144"
+            yCoord="353">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextField_loc>
+      </TextField>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="10"
+          events="8"
+          imageButton="false"
+          movable="true"
+          name="component_33"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="KrHYeQH6KNAJiLlS9luGo8"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="25"
+            hideBorder="false"
+            hintText=""
+            label="Apply  Filter"
+            locale=""
+            mnemonic="A"
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="true"
+            verticalTextAlignment="CENTRE"
+            width="87"
+            xCoord="258"
+            yCoord="353">
+          <ForegroundColour />
+          <BackgroundColour
+              name="MAButton" />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <TextLabel
+          depthOrder="11"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="txtTransactionAmountTotal"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="rwoJ52f1uT5myl09BGSvK6"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Transaction Amount Total  $"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="162"
+            xCoord="355"
+            yCoord="360">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextField
+          checkSpelling="false"
+          columns="10"
+          depthOrder="12"
+          eagerUpdate="false"
+          events="0"
+          horizontalScroll="false"
+          maxLength="10"
+          movable="true"
+          name="txtTotalAmount"
+          readOnly="true"
+          required="false"
+          resizable="true"
+          rows="1"
+          secret="false"
+          showAs=""
+          showHtmlContent="SAFE"
+          verticalScroll="false"
+          wrapText="true">
+        <RepresentationReference
+            name="GeckoTextField"
+            platform="Gecko" />
+        <TranslationCatalogueKey
+            key="kDelsO0Wei3fUbdEaVAmI6"
+            namespace="pacificorp_Auto" />
+        <TextField_loc
+            autoSelect="false"
+            automaticTab="false"
+            clientValidate=""
+            errorMessageValidation=""
+            explainValidation="false"
+            height="19"
+            hideBorder="false"
+            hintText=""
+            invisible="false"
+            isPerlTypeValidation="false"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            textCase="AS_IS"
+            width="74"
+            xCoord="519"
+            yCoord="357">
+          <ForegroundColour />
+          <BackgroundColour
+              name="MAReadOnly" />
+          <FontTagReference />
+        </TextField_loc>
+      </TextField>
+      <Button
+          abandon="false"
+          confirm="true"
+          depthOrder="13"
+          events="8"
+          imageButton="false"
+          movable="true"
+          name="component_36"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="y358Kn44ab21Snf3C9KMg8"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="25"
+            hideBorder="false"
+            hintText=""
+            label="OK"
+            locale=""
+            mnemonic="O"
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="true"
+            verticalTextAlignment="CENTRE"
+            width="87"
+            xCoord="687"
+            yCoord="385">
+          <ForegroundColour />
+          <BackgroundColour
+              name="MAButton" />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <ListBox
+          cellSelectEnable="false"
+          depthOrder="15"
+          disableRowResize="false"
+          disableTextWrap="false"
+          doubleClick="false"
+          events="32"
+          filtered="false"
+          graphType="TEXT"
+          graphable="true"
+          hideColumnHeaders="false"
+          hideGraphControls="true"
+          horizontalScroll="false"
+          individualHtmlLinks="false"
+          movable="true"
+          multipleSelect="true"
+          name="component_37"
+          paginatedList="false"
+          proportionalResize="false"
+          rearrangeableColumns="false"
+          require="false"
+          required="false"
+          resizable="true"
+          rows="5"
+          showAs=""
+          showAsGrid="false"
+          showGraphLegend="false"
+          showLines="true"
+          sortByColumn="true"
+          tabulate="true"
+          threeDGraphics="false"
+          verticalScroll="true">
+        <TranslationCatalogueKey
+            key="kRfnujarrY5NkzXhTMu6R6"
+            namespace="pacificorp_Auto" />
+        <ViewDefinitionReference
+            name="VW_AcctAnalysisView" />
+        <ListBox_loc
+            height="148"
+            hintText=""
+            locale=""
+            scriptText=""
+            width="586"
+            xCoord="33"
+            yCoord="196">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </ListBox_loc>
+      </ListBox>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="16"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_4"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="PnrAJWMLmP7ZmraUxtcJ57"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="40"
+            hideBorder="false"
+            hintText="View"
+            imageSource="Look1"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="40"
+            xCoord="74"
+            yCoord="10">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <ListBox
+          cellSelectEnable="false"
+          depthOrder="17"
+          disableRowResize="false"
+          disableTextWrap="false"
+          doubleClick="true"
+          events="32"
+          filtered="false"
+          graphType="TEXT"
+          graphable="true"
+          hideColumnHeaders="false"
+          hideGraphControls="true"
+          horizontalScroll="false"
+          individualHtmlLinks="false"
+          movable="true"
+          multipleSelect="false"
+          name="component_40"
+          paginatedList="false"
+          proportionalResize="false"
+          rearrangeableColumns="false"
+          require="false"
+          required="false"
+          resizable="true"
+          rows="5"
+          showAs=""
+          showAsGrid="false"
+          showGraphLegend="false"
+          showLines="false"
+          sortByColumn="true"
+          tabulate="true"
+          threeDGraphics="false"
+          verticalScroll="true">
+        <TranslationCatalogueKey
+            key="qACRVE6QjE0C1wrcO77Mr5"
+            namespace="pacificorp_Auto" />
+        <ViewDefinitionReference
+            name="Activity_ListView" />
+        <ListBox_loc
+            height="134"
+            hintText=""
+            locale=""
+            scriptText=""
+            width="144"
+            xCoord="630"
+            yCoord="59">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </ListBox_loc>
+      </ListBox>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="18"
+          events="8"
+          imageButton="false"
+          movable="true"
+          name="component_42"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="Q28iK5qc4k2NtvLtrL5db9"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="25"
+            hideBorder="false"
+            hintText=""
+            label="More"
+            locale=""
+            mnemonic="M"
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="true"
+            verticalTextAlignment="CENTRE"
+            width="87"
+            xCoord="596"
+            yCoord="385">
+          <ForegroundColour />
+          <BackgroundColour
+              name="MAButton" />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="19"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_5"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="DDKp1GrBvB9zZKDhruTGt8"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="40"
+            hideBorder="false"
+            hintText="Calculate"
+            imageSource="Calculator"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="40"
+            xCoord="117"
+            yCoord="10">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="20"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_6"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="3HMEs0vCRn9pNa2XcpYMO9"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="40"
+            hideBorder="false"
+            hintText="Account Information"
+            imageSource="Account1"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="40"
+            xCoord="713"
+            yCoord="11">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <DateInputField
+          allowNulls="false"
+          depthOrder="21"
+          disabled="false"
+          events="2052"
+          hideWidget="false"
+          movable="true"
+          name="date1"
+          required="false"
+          resizable="true"
+          showAs="">
+        <RepresentationReference
+            name="GT_VXMLDateInputField"
+            platform="GT_VXML" />
+        <RepresentationReference
+            name="GT_WEBDateInputField"
+            platform="GT_WEB" />
+        <TranslationCatalogueKey
+            key="qN8t9jG8jr15DdTAmAAM06"
+            namespace="pacificorp_Auto" />
+        <DateInputField_loc
+            circleToday="false"
+            height="20"
+            hintText=""
+            locale=""
+            longFormat="false"
+            scriptText=""
+            showToday="true"
+            showWeekNumbers="false"
+            width="85"
+            xCoord="675"
+            yCoord="250">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </DateInputField_loc>
+      </DateInputField>
+      <DateInputField
+          allowNulls="false"
+          depthOrder="22"
+          disabled="false"
+          events="2052"
+          hideWidget="false"
+          movable="true"
+          name="date2"
+          required="false"
+          resizable="true"
+          showAs="">
+        <RepresentationReference
+            name="GT_VXMLDateInputField"
+            platform="GT_VXML" />
+        <RepresentationReference
+            name="GT_WEBDateInputField"
+            platform="GT_WEB" />
+        <TranslationCatalogueKey
+            key="NRAgZCg1da7AR2ncWAWUf9"
+            namespace="pacificorp_Auto" />
+        <DateInputField_loc
+            circleToday="false"
+            height="20"
+            hintText=""
+            locale=""
+            longFormat="false"
+            scriptText=""
+            showToday="true"
+            showWeekNumbers="false"
+            width="85"
+            xCoord="675"
+            yCoord="289">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </DateInputField_loc>
+      </DateInputField>
+      <Layout
+          validLayout="true">
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_31"
+              fixed="358"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_31"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_31"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_31"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_1"
+              fixed="10"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_1"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_1"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_1"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_37"
+              fixed="196"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_37"
+              fixed="148"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_37"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_37"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_4"
+              fixed="10"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_4"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_4"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_4"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_5"
+              fixed="10"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_5"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_5"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_5"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="txtTransactionType"
+              fixed="353"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="txtTransactionType"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="txtTransactionType"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="txtTransactionType"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_3"
+              fixed="10"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_3"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_3"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_3"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_33"
+              fixed="353"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_33"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_33"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_33"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="txtTransactionAmountTotal"
+              fixed="360"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="txtTransactionAmountTotal"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="txtTransactionAmountTotal"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="txtTransactionAmountTotal"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="txtTotalAmount"
+              fixed="357"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="txtTotalAmount"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="txtTotalAmount"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="txtTotalAmount"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_42"
+              fixed="385"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_42"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_42"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_42"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_40"
+              fixed="59"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_40"
+              fixed="134"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_40"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_40"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="Graphic"
+              fixed="233"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="Graphic"
+              fixed="114"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="Graphic"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="Graphic"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_2"
+              fixed="12"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_2"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_2"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_2"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_36"
+              fixed="385"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_36"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_36"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_36"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_6"
+              fixed="11"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_6"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_6"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_6"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="1">
+          <Link
+              finishEdge="TOP"
+              finishId="component_26"
+              fixed="20"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="Graphic"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_26"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_26"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_26"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="1">
+          <Link
+              finishEdge="TOP"
+              finishId="component_28"
+              fixed="216"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_28"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_28"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="TOP"
+              finishId="Graphic"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_28"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="2">
+          <Link
+              finishEdge="TOP"
+              finishId="component_23"
+              fixed="25"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="BOTTOM"
+              startId="component_26"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_23"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_23"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_23"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="2">
+          <Link
+              finishEdge="TOP"
+              finishId="date1"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="YES"
+              startEdge="TOP"
+              startId="component_26"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="date1"
+              fixed="20"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="date1"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_26"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="date1"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="3">
+          <Link
+              finishEdge="TOP"
+              finishId="date2"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="YES"
+              startEdge="TOP"
+              startId="component_23"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="date2"
+              fixed="20"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="date2"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_23"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="date2"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="4">
+          <Link
+              finishEdge="TOP"
+              finishId="component_30"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="date2"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_30"
+              fixed="23"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_30"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="Graphic"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_30"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_1"
+              fixed="30"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_1"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_1"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_1"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_4"
+              fixed="74"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_4"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_4"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_4"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_5"
+              fixed="117"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_5"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_5"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_5"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_3"
+              fixed="161"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_3"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_3"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_3"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_6"
+              fixed="713"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_6"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_6"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_6"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_2"
+              fixed="650"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_2"
+              fixed="40"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_2"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_2"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_40"
+              fixed="630"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_40"
+              fixed="144"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_40"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_40"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_37"
+              fixed="33"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_37"
+              fixed="586"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_37"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_37"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="Graphic"
+              fixed="631"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="Graphic"
+              fixed="136"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="Graphic"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="Graphic"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="txtTransactionType"
+              fixed="144"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="txtTransactionType"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="txtTransactionType"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="txtTransactionType"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_33"
+              fixed="258"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_33"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_33"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_33"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="txtTotalAmount"
+              fixed="519"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="txtTotalAmount"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="txtTotalAmount"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="txtTotalAmount"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_31"
+              fixed="10"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_31"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_31"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_31"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="txtTransactionAmountTotal"
+              fixed="355"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="txtTransactionAmountTotal"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="txtTransactionAmountTotal"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="txtTransactionAmountTotal"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_42"
+              fixed="596"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_42"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_42"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_42"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_36"
+              fixed="687"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_36"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_36"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_36"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="1">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_28"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="YES"
+              startEdge="LEFT"
+              startId="Graphic"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_28"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_28"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="Graphic"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_28"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="1">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_26"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="YES"
+              startEdge="LEFT"
+              startId="Graphic"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_26"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_26"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="LEFT"
+              finishId="date1"
+              fixed="0"
+              owner="2"
+              shared="YES"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_26"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="date1"
+              fixed="85"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="date1"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="Graphic"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="date1"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="2">
+          <Link
+              finishEdge="LEFT"
+              finishId="date2"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="date1"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="date2"
+              fixed="85"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="date2"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="date1"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="date2"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="2">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_23"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="YES"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_23"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_23"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_26"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="RIGHT"
+              startId="component_23"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="2">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_30"
+              fixed="0"
+              owner="2"
+              shared="NO"
+              spring="YES"
+              startEdge="LEFT"
+              startId="component_26"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_30"
+              fixed="30"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_30"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="date1"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_30"
+              strutType="FIXED" />
+        </Chain>
+      </Layout>
+    </Pane>
+    <TabOrder>
+      <FormComponentReference
+          name="date1" />
+      <FormComponentReference
+          name="date2" />
+      <FormComponentReference
+          name="component_30" />
+      <FormComponentReference
+          name="component_42" />
+      <FormComponentReference
+          name="txtTransactionType" />
+      <FormComponentReference
+          name="component_33" />
+      <FormComponentReference
+          name="component_1" />
+      <FormComponentReference
+          name="component_4" />
+      <FormComponentReference
+          name="component_5" />
+      <FormComponentReference
+          name="component_3" />
+      <FormComponentReference
+          name="component_2" />
+      <FormComponentReference
+          name="component_6" />
+      <FormComponentReference
+          name="component_36" />
+    </TabOrder>
+    <ClientRuleBook />
+    <LayoutPane
+        layoutManagerObjectReference=""
+        paneReference="pane0">
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="Graphic" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_1" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_2" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_23" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_26" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_28" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_3" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_30" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_31" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="txtTransactionType" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_33" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="txtTransactionAmountTotal" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="txtTotalAmount" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_36" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_37" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_4" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_40" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_42" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_5" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="component_6" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="date1" />
+      </LayoutChildFormComponent>
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="date2" />
+      </LayoutChildFormComponent>
+    </LayoutPane>
+  </Form>

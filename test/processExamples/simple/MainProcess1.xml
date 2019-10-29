@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProcessDefinition [] >
+<PackageEntry>
+      <ImportDeclaration name="MessageDialog">
+        <PackageSpecifier name="">
+          <PackageName name="FrameworkCommon" />
+          <PackageName name="API" />
+          <PackageName name="PopUpQuestion" />
+        </PackageSpecifier>
+        <PackageEntryReference name="MessageDialog" />
+      </ImportDeclaration>
+      <ImportDeclaration name="MessageDialog">
+        <PackageSpecifier name="">
+          <PackageName name="FrameworkCommon" />
+          <PackageName name="API" />
+          <PackageName name="PopUpQuestion" />
+        </PackageSpecifier>
+        <PackageEntryReference name="MessageDialog" />
+      </ImportDeclaration>
+      <ProcessDefinition appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="MainProcess" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
+        <ProcessDefinition name="ValidationProcess" nested="true" />
+        <StartNode displayName="" name="" x="22" y="32" />
+        <EndNode displayName="" name="" x="246" y="32" />
+        <Transition isExceptionTransition="false">
+          <StartNodeReference name="" />
+          <EndNodeReference name="" />
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="134" y="32" />
+          </GraphNodeList>
+        </Transition>
+        <BuilderInfo name="" />
+        <TopicScope defineTopicScope="false" name="" />
+      </ProcessDefinition>
+    </PackageEntry>
+    

@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Form [] >
+  <Form
+      autoSizePopupHeight="false"
+      autoSizePopupWidth="false"
+      centred="false"
+      closable="true"
+      designNotes="Defect #4916 - Client froze at Modified Search Agreement - due to null pointer exception for multiple popups"
+      events="1"
+      iconisable="false"
+      lockOnAction="false"
+      mainWindow="false"
+      maximisable="true"
+      maximiseOnStart="false"
+      modal="true"
+      name="PAYS_DisplayForm"
+      naturalSizeTabImage="false"
+      resizable="true"
+      screenRelative="true"
+      staticForm="true"
+      version="10">
+    <TranslationCatalogueKey
+        key=""
+        namespace="" />
+    <Form_loc
+        backgroundImage=""
+        formClassName=""
+        height="552"
+        hintText=""
+        iconSource=""
+        locale=""
+        naturalSizeTabImage="false"
+        padding="0"
+        scriptText=""
+        shortTitle="Paystations"
+        title="Paystations"
+        titleAlignment="CENTRE"
+        useTabButton="false"
+        useTabImage="false"
+        width="888"
+        xCoord="0"
+        yCoord="123">
+      <FontTagReference />
+    </Form_loc>
+    <Pane
+        enforceMinimumHeight="false"
+        enforceMinimumWidth="false"
+        name="pane0">
+      <Pane_loc
+          height="552"
+          locale=""
+          minimumHeight="0"
+          minimumWidth="0"
+          width="888" />
+      <TextLabel
+          depthOrder="0"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="Area"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="eG1A1DrquM2OMbC2ABU6b5"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Area"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="27"
+            xCoord="456"
+            yCoord="308">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <GraphicBox
+          depthOrder="1"
+          events="0"
+          movable="true"
+          name="Graphic"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="2eWVPb9wvY1bBrSL3Wc969"
+            namespace="pacificorp_Auto" />
+        <GraphicBox_loc
+            borderThickness="1"
+            height="36"
+            hideBorder="false"
+            hintText=""
+            locale=""
+            scriptText=""
+            threeDEffect="true"
+            title="Proximity"
+            width="213"
+            xCoord="440"
+            yCoord="39">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </GraphicBox_loc>
+      </GraphicBox>
+      <RadioButton
+          depthOrder="2"
+          events="1"
+          groupName="GTDictionary.PAYS_Locals.Proximity"
+          movable="true"
+          name="Proximity_169"
+          required="false"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="ERmsPnOMY30g2s1lmFVW19"
+            namespace="pacificorp_Auto" />
+        <RadioButton_loc
+            defaultValue="A"
+            height="15"
+            hintText=""
+            label="Area"
+            locale=""
+            scriptText=""
+            transparentBackground="true"
+            width="51"
+            xCoord="502"
+            yCoord="53">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </RadioButton_loc>
+      </RadioButton>
+      <RadioButton
+          depthOrder="3"
+          events="1"
+          groupName="GTDictionary.PAYS_Locals.Proximity"
+          movable="true"
+          name="Proximity_171"
+          required="false"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="Yrn6TntZRZ0vu7XfDwfKE8"
+            namespace="pacificorp_Auto" />
+        <RadioButton_loc
+            defaultValue="C"
+            height="15"
+            hintText=""
+            label="City"
+            locale=""
+            scriptText=""
+            transparentBackground="true"
+            width="44"
+            xCoord="557"
+            yCoord="53">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </RadioButton_loc>
+      </RadioButton>
+      <RadioButton
+          depthOrder="4"
+          events="1"
+          groupName="GTDictionary.PAYS_Locals.Proximity"
+          movable="true"
+          name="Proximity_178"
+          required="false"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="kmjyA2pbsw9huUSiVUuEx9"
+            namespace="pacificorp_Auto" />
+        <RadioButton_loc
+            defaultValue="S"
+            height="15"
+            hintText=""
+            label="State"
+            locale=""
+            scriptText=""
+            transparentBackground="true"
+            width="57"
+            xCoord="449"
+            yCoord="53">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </RadioButton_loc>
+      </RadioButton>
+      <RadioButton
+          depthOrder="5"
+          events="1"
+          groupName="GTDictionary.PAYS_Locals.Proximity"
+          movable="true"
+          name="Proximity_191"
+          required="false"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="xSfLlgo8Zr2iAHQqXxXdJ8"
+            namespace="pacificorp_Auto" />
+        <RadioButton_loc
+            defaultValue="L"
+            height="15"
+            hintText=""
+            label="All"
+            locale=""
+            scriptText=""
+            transparentBackground="true"
+            width="35"
+            xCoord="609"
+            yCoord="53">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </RadioButton_loc>
+      </RadioButton>
+      <Button
+          abandon="false"
+          confirm="true"
+          depthOrder="6"
+          events="8"
+          imageButton="false"
+          movable="true"
+          name="component_123"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="mHQTRPqa8y9WxT6q03W3O7"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="25"
+            hideBorder="false"
+            hintText=""
+            label="OK"
+            locale=""
+            mnemonic="O"
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="true"
+            verticalTextAlignment="CENTRE"
+            width="87"
+            xCoord="682"
+            yCoord="378">
+          <ForegroundColour
+              name="gray0" />
+          <BackgroundColour
+              name="MAButton" />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="8"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_132"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="LCpmzerreX84pWCY9Vwh3A"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="36"
+            hideBorder="false"
+            hintText="Restore"
+            imageSource="Restore1"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="36"
+            xCoord="18"
+            yCoord="6">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <TextField
+          checkSpelling="false"
+          columns="68"
+          depthOrder="24"
+          eagerUpdate="false"
+          events="0"
+          horizontalScroll="false"
+          maxLength="100"
+          movable="true"
+          name="txtAddress"
+          readOnly="true"
+          required="false"
+          resizable="true"
+          rows="1"
+          secret="false"
+          showAs=""
+          showHtmlContent="SAFE"
+          verticalScroll="false"
+          wrapText="true">
+        <RepresentationReference
+            name="GeckoTextField"
+            platform="Gecko" />
+        <TranslationCatalogueKey
+            key="eYQ9HnuLrkA0x6K1rT68w7"
+            namespace="pacificorp_Auto" />
+        <TextField_loc
+            autoSelect="false"
+            automaticTab="false"
+            clientValidate=""
+            errorMessageValidation=""
+            explainValidation="false"
+            height="20"
+            hideBorder="false"
+            hintText=""
+            invisible="false"
+            isPerlTypeValidation="false"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            textCase="AS_IS"
+            width="280"
+            xCoord="82"
+            yCoord="386">
+          <ForegroundColour />
+          <BackgroundColour
+              name="MAReadOnly" />
+          <FontTagReference />
+        </TextField_loc>
+      </TextField>
+      <TextLabel
+          depthOrder="9"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_151"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="9LQQNGVmf55HFykQ1YULJ7"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Address"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="48"
+            xCoord="12"
+            yCoord="389">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextLabel
+          depthOrder="10"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_153"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="HBVGWTgUeR7JQyleEqvZU7"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Last Updated"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="76"
+            xCoord="456"
+            yCoord="334">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextLabel
+          depthOrder="11"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_154"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="9raxJCjQv425Gz0uTKA3YA"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Merchant"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="53"
+            xCoord="12"
+            yCoord="335">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="12"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_156"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="1KMdqb3t3W9JA9jayNSJ16"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="36"
+            hideBorder="false"
+            hintText="Toolbar"
+            imageSource="ToolbarNew"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="36"
+            xCoord="66"
+            yCoord="6">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="13"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_157"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="fT7Z6ouDWIAs9NLh62xeK9"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="36"
+            hideBorder="false"
+            hintText="Site Information"
+            imageSource="Site1"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="36"
+            xCoord="660"
+            yCoord="6">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="14"
+          events="8"
+          imageButton="true"
+          movable="true"
+          name="component_158"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="mmHPZrrx7zAfLAywdRBCH6"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="36"
+            hideBorder="false"
+            hintText="Customer Information"
+            imageSource="Account1"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="36"
+            xCoord="717"
+            yCoord="5">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <ListBox
+          cellSelectEnable="false"
+          depthOrder="15"
+          disableRowResize="false"
+          disableTextWrap="false"
+          doubleClick="false"
+          events="32"
+          filtered="true"
+          graphType="TEXT"
+          graphable="false"
+          hideColumnHeaders="false"
+          hideGraphControls="false"
+          horizontalScroll="false"
+          individualHtmlLinks="false"
+          movable="true"
+          multipleSelect="false"
+          name="component_176"
+          paginatedList="false"
+          proportionalResize="false"
+          rearrangeableColumns="false"
+          require="false"
+          required="false"
+          resizable="true"
+          rows="5"
+          showAs=""
+          showAsGrid="false"
+          showGraphLegend="false"
+          showLines="true"
+          sortByColumn="true"
+          tabulate="true"
+          threeDGraphics="false"
+          verticalScroll="true">
+        <RepresentationReference
+            name="GT_WEBListBoxDataTable"
+            platform="GT_WEB" />
+        <TranslationCatalogueKey
+            key="8CZy8YPoOv3DSFKZI6T2a9"
+            namespace="pacificorp_Auto" />
+        <ViewDefinitionReference
+            name="PaystationsView" />
+        <ListBox_loc
+            height="213"
+            hintText=""
+            locale=""
+            scriptText=""
+            width="740"
+            xCoord="12"
+            yCoord="85">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </ListBox_loc>
+      </ListBox>
+      <TextField
+          checkSpelling="false"
+          columns="3"
+          depthOrder="16"
+          eagerUpdate="false"
+          events="16384"
+          horizontalScroll="false"
+          maxLength="2"
+          movable="true"
+          name="txtState"
+          readOnly="false"
+          required="false"
+          resizable="true"
+          rows="1"
+          secret="false"
+          showAs=""
+          showHtmlContent="SAFE"
+          verticalScroll="false"
+          wrapText="true">
+        <RepresentationReference
+            name="GT_WEBTextField"
+            platform="GT_WEB" />
+        <RepresentationReference
+            name="GeckoTextField"
+            platform="Gecko" />
+        <TranslationCatalogueKey
+            key="c15wukdLlH2oAF7yQv1w68"
+            namespace="pacificorp_Auto" />
+        <TextField_loc
+            autoSelect="false"
+            automaticTab="false"
+            clientValidate=""
+            errorMessageValidation=""
+            explainValidation="false"
+            height="20"
+            hideBorder="false"
+            hintText=""
+            invisible="false"
+            isPerlTypeValidation="false"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            textCase="UPPER"
+            width="25"
+            xCoord="325"
+            yCoord="52">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextField_loc>
+      </TextField>
+      <Button
+          abandon="false"
+          confirm="false"
+          depthOrder="17"
+          events="8"
+          imageButton="false"
+          movable="true"
+          name="component_181"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="77fRvb1Im11rGoo8fUcl78"
+            namespace="pacificorp_Auto" />
+        <Button_loc
+            height="15"
+            hideBorder="false"
+            hintText=""
+            imageSource="i_dnarr"
+            label=""
+            locale=""
+            padding="0"
+            repeatBackground="true"
+            scriptText=""
+            textAlignment="CENTRE"
+            textAntiAliasing="true"
+            transparentBackground="false"
+            verticalTextAlignment="CENTRE"
+            width="20"
+            xCoord="354"
+            yCoord="54">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </Button_loc>
+      </Button>
+      <TextLabel
+          depthOrder="18"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_182"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="B88umzzFx813KlJuMJZUiA"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="City "
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="26"
+            xCoord="13"
+            yCoord="55">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextLabel
+          depthOrder="19"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_188"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="IGdmkCHuq2287SvHiuYFE9"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Hours "
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="39"
+            xCoord="12"
+            yCoord="443">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextLabel
+          depthOrder="20"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_192"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="xKXIrNLbwg3sucxCAIZHd5"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Directions "
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="62"
+            xCoord="12"
+            yCoord="497">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextField
+          checkSpelling="false"
+          columns="30"
+          depthOrder="21"
+          eagerUpdate="false"
+          events="0"
+          horizontalScroll="false"
+          maxLength="30"
+          movable="true"
+          name="txtCity"
+          readOnly="false"
+          required="false"
+          resizable="true"
+          rows="1"
+          secret="false"
+          showAs=""
+          showHtmlContent="SAFE"
+          verticalScroll="false"
+          wrapText="true">
+        <RepresentationReference
+            name="GeckoTextField"
+            platform="Gecko" />
+        <TranslationCatalogueKey
+            key="BcL1TFKxEV7OySJ5XInAZ8"
+            namespace="pacificorp_Auto" />
+        <TextField_loc
+            autoSelect="false"
+            automaticTab="false"
+            clientValidate=""
+            errorMessageValidation=""
+            explainValidation="false"
+            height="20"
+            hideBorder="false"
+            hintText=""
+            invisible="false"
+            isPerlTypeValidation="false"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            textCase="INITIAL"
+            width="214"
+            xCoord="54"
+            yCoord="52">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextField_loc>
+      </TextField>
+      <TextLabel
+          depthOrder="22"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="component_195"
+          resizable="true"
+          showAs="">
+        <TranslationCatalogueKey
+            key="6mqf7sYXMV0ErOsHyoB839"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="State"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="31"
+            xCoord="283"
+            yCoord="55">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+      <TextLabel
+          depthOrder="23"
+          events="0"
+          labelFor=""
+          movable="true"
+          name="lblPayStations"
+          resizable="true"
+          showAs="">
+        <RepresentationReference
+            name="GT_JABBERTextLabel"
+            platform="GT_JABBER" />
+        <RepresentationReference
+            name="GT_SMSTextLabel"
+            platform="GT_SMS" />
+        <RepresentationReference
+            name="GT_VXMLTextLabel"
+            platform="GT_VXML" />
+        <RepresentationReference
+            name="GT_WAPTextLabel"
+            platform="GT_WAP" />
+        <RepresentationReference
+            name="GT_WEBTextLabel"
+            platform="GT_WEB" />
+        <RepresentationReference
+            name="NortelTextLabel"
+            platform="Nortel" />
+        <TranslationCatalogueKey
+            key="C0yKaocSTp8XKd7GWwcKt6"
+            namespace="pacificorp_Auto" />
+        <TextLabel_loc
+            height="14"
+            hintText=""
+            label="Paystations"
+            locale=""
+            scriptText=""
+            textAlignment="LEFT"
+            transparentBackground="true"
+            width="67"
+            xCoord="166"
+            yCoord="13">
+          <ForegroundColour />
+          <BackgroundColour />
+          <FontTagReference />
+        </TextLabel_loc>
+      </TextLabel>
+    </Pane>
+    <TabOrder>
+      <FormComponentReference
+          name="txtCity" />
+      <FormComponentReference
+          name="txtState" />
+      <FormComponentReference
+          name="component_181" />
+      <FormComponentReference
+          name="Proximity_178" />
+      <FormComponentReference
+          name="Proximity_169" />
+      <FormComponentReference
+          name="Proximity_171" />
+      <FormComponentReference
+          name="Proximity_191" />
+      <FormComponentReference
+          name="component_176" />
+      <FormComponentReference
+          name="component_123" />
+      <FormComponentReference
+          name="component_132" />
+      <FormComponentReference
+          name="component_156" />
+      <FormComponentReference
+          name="component_157" />
+      <FormComponentReference
+          name="component_158" />
+    </TabOrder>
+    <ClientRuleBook />
+    <LayoutPane
+        layoutManagerObjectReference="HeaderContentLayout"
+        paneReference="pane0">
+      <LayoutChildFormComponent>
+        <FormComponentReference
+            name="lblPayStations" />
+      </LayoutChildFormComponent>
+      <LayoutGroup
+          layoutManagerObjectReference="VerticalLayout"
+          name="layoutGroup0">
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="Proximity_191" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="Proximity_169" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="Proximity_171" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="Proximity_178" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="txtAddress" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_151" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_153" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_154" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_176" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="txtState" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_182" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_188" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_192" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="txtCity" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_195" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="Graphic" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="Area" />
+        </LayoutChildFormComponent>
+      </LayoutGroup>
+      <LayoutGroup
+          layoutManagerObjectReference="ButtonLayout"
+          name="layoutGroup1">
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_156" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_157" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_158" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_123" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_132" />
+        </LayoutChildFormComponent>
+        <LayoutChildFormComponent>
+          <FormComponentReference
+              name="component_181" />
+        </LayoutChildFormComponent>
+      </LayoutGroup>
+    </LayoutPane>
+  </Form>

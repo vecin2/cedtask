@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Form [] >
+  <Form
+      centred="true"
+      closeable="false"
+      designNotes="Converted by GT_SERVES 6.4.26A (Apr 19 2007) at Thu Apr 26 18:47:38 2007&#10;"
+      events="1"
+      iconisable="true"
+      lockAll="false"
+      lockOnAction="false"
+      modal="true"
+      name="PAYS_City_State_SelectionForm"
+      screenRelative="false"
+      showHints="true"
+      staticForm="true"
+      stayUp="false"
+      version="10">
+    <Form_loc
+        backgroundImage=""
+        height="471"
+        iconSource=""
+        locale=""
+        shortTitle=" Select City and State for Pay Stations"
+        title=" Select City and State for Pay Stations"
+        useTabImage="false"
+        width="446"
+        xCoord="0"
+        yCoord="0">
+      <BackgroundColour
+          name="MALightBack" />
+    </Form_loc>
+    <Pane
+        name="pane0">
+      <Pane_loc
+          height="471"
+          locale=""
+          width="446" />
+      <ListBox
+          cellSelectEnable="false"
+          depthOrder="0"
+          disableRowResize="false"
+          disableTextWrap="false"
+          doubleClick="false"
+          events="32"
+          filtered="true"
+          graphType="TEXT"
+          graphable="true"
+          hideColumnHeaders="false"
+          hideGraphControls="false"
+          horizontalScroll="false"
+          individualHtmlLinks="false"
+          movable="true"
+          multipleSelect="false"
+          name="component_2"
+          proportionalResize="false"
+          rearrangableColumns="false"
+          require="false"
+          resizable="true"
+          showAs=""
+          showAsGrid="false"
+          showGraphLegend="false"
+          showLines="true"
+          sortByColumn="true"
+          swapAxes="false"
+          tabulate="true"
+          threeDGraphics="false"
+          verticalScroll="true">
+        <ListBox_loc
+            height="396"
+            help_context=""
+            hintText=""
+            locale=""
+            width="397"
+            xCoord="18"
+            yCoord="15">
+          <FontTagReference
+              name="" />
+          <ForegroundColour
+              name="" />
+          <BackgroundColour
+              name="" />
+        </ListBox_loc>
+        <ViewDefinitionReference
+            name="City_State_listView" />
+      </ListBox>
+      <Button
+          abandon="false"
+          confirm="true"
+          dependantOnMandatoryComponents="false"
+          depthOrder="1"
+          events="8"
+          executeClientBatchValidation="false"
+          imageButton="false"
+          movable="true"
+          name="component_1"
+          resizable="true"
+          showAs="">
+        <Button_loc
+            height="23"
+            help_context=""
+            hideBorder="false"
+            hintText=""
+            label="OK"
+            locale=""
+            mnemonic="O"
+            width="88"
+            xCoord="347"
+            yCoord="427">
+          <FontTagReference
+              name="LabelAreaBold" />
+          <ForegroundColour
+              name="gray0" />
+          <BackgroundColour
+              name="MAButton" />
+        </Button_loc>
+      </Button>
+      <Layout
+          validLayout="true">
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_2"
+              fixed="15"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_2"
+              fixed="396"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_2"
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_2"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_2"
+              fixed="18"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_2"
+              fixed="397"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_2"
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_2"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="VERTICAL"
+            level="0">
+          <Link
+              finishEdge="TOP"
+              finishId="component_1"
+              fixed="427"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId="component_1"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="TOP"
+              startId="component_1"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="BOTTOM"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="BOTTOM"
+              startId="component_1"
+              strutType="FIXED" />
+        </Chain>
+        <Chain
+            axis="HORIZONTAL"
+            level="0">
+          <Link
+              finishEdge="LEFT"
+              finishId="component_1"
+              fixed="347"
+              owner="2"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId=""
+              strutType="FIXED" />
+          <Link
+              finishEdge="RIGHT"
+              finishId="component_1"
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="NO"
+              startEdge="LEFT"
+              startId="component_1"
+              strutType="NATURAL" />
+          <Link
+              finishEdge="RIGHT"
+              finishId=""
+              fixed="0"
+              owner="1"
+              shared="NO"
+              spring="YES"
+              startEdge="RIGHT"
+              startId="component_1"
+              strutType="FIXED" />
+        </Chain>
+      </Layout>
+    </Pane>
+    <TabOrder>
+      <FormComponentReference
+          name="component_1" />
+    </TabOrder>
+  </Form>

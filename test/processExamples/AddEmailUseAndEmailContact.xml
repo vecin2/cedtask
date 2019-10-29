@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ProcessDefinition [] >
+  <PackageEntry>
+    <ImportDeclaration
+        name="FormUtils">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Utilities" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="FormUtils" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ScreenTextList">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ScreenTextList" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ScreenScriptAdapter">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Integration" />
+        <PackageName
+            name="DataAdapter" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ScreenScriptAdapter" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ScreenTextAdapter">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Integration" />
+        <PackageName
+            name="DataAdapter" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ScreenTextAdapter" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="Wait">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Process" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Wait" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="CustAcctEmailUseAdapter">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Integration" />
+        <PackageName
+            name="DataAdapter" />
+        <PackageName
+            name="DB2" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="CustAcctEmailUseAdapter" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="Account">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="CustomerDirectory" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="Account" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ContactHistory">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="ContactHistory" />
+        <PackageName
+            name="Objects" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ContactHistory" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="ContactHistoryAdapter">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="ContactHistory" />
+        <PackageName
+            name="Integration" />
+        <PackageName
+            name="DataAdapters" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="ContactHistoryAdapter" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="SystemUtils">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Utilities" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="SystemUtils" />
+    </ImportDeclaration>
+    <ImportDeclaration
+        name="StringUtils">
+      <PackageSpecifier
+          name="">
+        <PackageName
+            name="Common" />
+        <PackageName
+            name="Utilities" />
+      </PackageSpecifier>
+      <PackageEntryReference
+          name="StringUtils" />
+    </ImportDeclaration>
+    <ProcessDefinition
+        appearsInHistory="true"
+        cyclic="false"
+        designNotes="Undefined"
+        exceptionStrategy="1"
+        icon=""
+        isPrivate="false"
+        logicalDatabaseConnection=""
+        name="AddEmailUseAndEmailContact"
+        nested="false"
+        pointOfNoReturn="false"
+        transactionBehaviour="TX_NOT_SUPPORTED"
+        version="10"
+        waitOnChildren="false">
+      <InstanceFields>
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="customerIdn">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="accountSeq">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="emailAddress">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <IntegerField
+            isAttribute="false"
+            name="rtnStatus">
+          <IntegerField_loc
+              locale="">
+            <Format />
+          </IntegerField_loc>
+        </IntegerField>
+        <ObjectField
+            isAggregate="false"
+            isAttribute="false"
+            name="account">
+          <ObjectField_loc
+              locale="">
+            <Format />
+          </ObjectField_loc>
+          <TypeDefinitionReference
+              name="Account"
+              nested="false" />
+        </ObjectField>
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="agentId">
+          <StringField_loc
+              locale="">
+            <Format />
+            <JavascriptFunction
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[SystemUtils.getUsername()]]>
+              </Verbatim>
+            </JavascriptFunction>
+          </StringField_loc>
+        </StringField>
+      </InstanceFields>
+      <StartNode
+          displayName=""
+          name=""
+          x="64"
+          y="144" />
+      <EndNode
+          displayName=""
+          name=""
+          x="784"
+          y="80" />
+      <ThisNode
+          displayName=""
+          name="fieldStore3"
+          x="144"
+          y="224" />
+      <ProcedureCall
+          builtIn="false"
+          classMethod="true"
+          displayName="insertEmailUseAndEmailContact"
+          methodName="insertEmailUseAndEmailContact"
+          name="insertEmailUseAndEmailContact"
+          resultType="IntegerField"
+          type="DataAdapter"
+          x="208"
+          y="144">
+        <RecordDefinitionReference
+            name="CustAcctEmailUseAdapter"
+            nested="false" />
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="customerIdn">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="accountSeq">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="emailAddress">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <StringField
+            isAttribute="false"
+            length="0"
+            name="AgentId">
+          <StringField_loc
+              locale="">
+            <Format />
+          </StringField_loc>
+        </StringField>
+        <IntegerField
+            isAttribute="false"
+            name=".result">
+          <IntegerField_loc
+              locale="">
+            <Format />
+          </IntegerField_loc>
+        </IntegerField>
+      </ProcedureCall>
+      <AssignNode
+          displayName=""
+          name="chkStatus"
+          x="384"
+          y="144" />
+      <PopupQuestionNode
+          displayName="success"
+          name="success"
+          question="Information"
+          text="Transaction successfully complete. "
+          x="576"
+          y="288">
+        <PositiveButton
+            text="OK" />
+        <NegativeButton
+            text=" " />
+        <Result
+            from=""
+            name=".result"
+            to="" />
+      </PopupQuestionNode>
+      <PopupQuestionNode
+          displayName="failed"
+          name="failed"
+          question="Error"
+          text="Transaction Failed. Try again. "
+          x="544"
+          y="208">
+        <PositiveButton
+            text="OK" />
+        <NegativeButton
+            text=" " />
+        <Result
+            from=""
+            name=".result"
+            to="" />
+      </PopupQuestionNode>
+      <PopupQuestionNode
+          displayName="exceptionerror"
+          name="exceptionerror"
+          question="Error"
+          text="DB2 exception occured. Try again later."
+          x="336"
+          y="352">
+        <PositiveButton
+            text="OK" />
+        <NegativeButton
+            text=" " />
+        <Result
+            from=""
+            name=".result"
+            to="" />
+      </PopupQuestionNode>
+      <Transition
+          isExceptionTransition="false">
+        <FromNode
+            name="insertEmailUseAndEmailContact" />
+        <ToNode
+            name="chkStatus" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="288"
+              y="144" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="true">
+        <FromNode
+            name="insertEmailUseAndEmailContact" />
+        <ToNode
+            name="exceptionerror" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="208"
+              y="352" />
+        </GraphNodeList>
+        <ExceptionDefinitionReference
+            name="Exception"
+            nested="false" />
+      </Transition>
+      <Transition
+          isExceptionTransition="false">
+        <StartNodeReference
+            name="" />
+        <ToNode
+            name="insertEmailUseAndEmailContact" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="144"
+              y="144" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false">
+        <FromNode
+            name="exceptionerror" />
+        <EndNodeReference
+            name="" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="784"
+              y="352" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false">
+        <FromNode
+            name="failed" />
+        <EndNodeReference
+            name="" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="784"
+              y="208" />
+        </GraphNodeList>
+      </Transition>
+      <Transition
+          isExceptionTransition="false">
+        <FromNode
+            name="success" />
+        <EndNodeReference
+            name="" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="784"
+              y="288" />
+        </GraphNodeList>
+      </Transition>
+      <OrSplitTransition
+          isExceptionTransition="false"
+          name="orsplit"
+          x="480"
+          y="144">
+        <Condition
+            exceptionStrategy="0"
+            language="EcmaScript"
+            name=""
+            version="">
+          <Verbatim
+              fieldName="text">
+<![CDATA[rtnStatus > 0]]>
+          </Verbatim>
+        </Condition>
+        <FromNode
+            name="chkStatus" />
+        <ToNode
+            name="success" />
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="480"
+              y="288" />
+        </GraphNodeList>
+        <Transition
+            isExceptionTransition="false">
+          <ToNode
+              name="failed" />
+          <GraphNodeList
+              name="">
+            <GraphNode
+                icon=""
+                isLabelHolder="true"
+                label=""
+                name=""
+                x="480"
+                y="208" />
+          </GraphNodeList>
+        </Transition>
+      </OrSplitTransition>
+      <Parameter
+          from=""
+          name="accountSeq"
+          to="" />
+      <Parameter
+          from=""
+          name="customerIdn"
+          to="" />
+      <Parameter
+          from=""
+          name="account"
+          to="" />
+      <Parameter
+          from=""
+          name="emailAddress"
+          to="" />
+      <DataFlow>
+        <FromNode
+            name="insertEmailUseAndEmailContact" />
+        <ToNode
+            name="fieldStore3" />
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[.result]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="rtnStatus" />
+          </ToField>
+        </DataFlowEntry>
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="144"
+              y="144" />
+        </GraphNodeList>
+      </DataFlow>
+      <DataFlow>
+        <FromNode
+            name="fieldStore3" />
+        <ToNode
+            name="insertEmailUseAndEmailContact" />
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[account]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="account" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[customerIdn]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="customerIdn" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[accountSeq]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="accountSeq" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[emailAddress]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="emailAddress" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[agentId]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="AgentId" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA["GTXAPP"]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="appName" />
+          </ToField>
+        </DataFlowEntry>
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="208"
+              y="224" />
+        </GraphNodeList>
+      </DataFlow>
+      <BuilderInfo
+          name="" />
+      <TopicScope
+          defineTopicScope="false"
+          name="" />
+    </ProcessDefinition>
+  </PackageEntry>
