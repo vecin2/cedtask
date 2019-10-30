@@ -1,5 +1,5 @@
 import os
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 
 from core.objects import ProcessDefinition,SourceObjectParser
 
@@ -37,6 +37,7 @@ class SourceCodeVisitor(object):
     def visit_file(self,dirpath,name):
         if name.lower().endswith(".xml"):
             filepath=os.path.join(dirpath, name)
+            parser = ET.XMLParser(strip_cdata=False)
             tree=ET.parse(filepath)
             f = self.get_visitor(tree)
             if f is not None:

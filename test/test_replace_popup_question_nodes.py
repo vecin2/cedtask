@@ -1,6 +1,9 @@
 from collections import defaultdict
-import pytest
 import os
+from shutil import copyfile,rmtree
+
+import pytest
+
 
 from test.utils.fake_logging import FakeLogger
 from core.objects import PackageEntry,SourceObjectParser
@@ -8,10 +11,22 @@ from use_cases.popup_replacer import PopupReplacer
 
 no_process_found_msg="No processes found containing PopupQuestions"
 
+@pytest.fixture()
+def cleandir():
+    try:
+        script_dir =os.path.dirname(__file__)
+        rmtree(script_dir+"/tmp")
+    except OSError:
+        pass
 
 def full_path(relative_path):
     script_dir =os.path.dirname(__file__)
-    return script_dir+"/"+relative_path
+    original_file = script_dir+"/"+relative_path
+    target = script_dir +"/tmp/test_processes/"+ relative_path
+    os.makedirs(os.path.dirname(target), exist_ok=True)
+    copyfile(original_file,target)
+    return target
+
 
 def add_real_file(fs, relative_path, fake_path=None):
     real_path =full_path(relative_path.replace("/",str(os.sep)))
@@ -24,26 +39,26 @@ def replace(logger,filesystem_path=None,file_with_paths=None):
     popup_replacer = PopupReplacer(logger)
     popup_replacer.replace(filesystem_path,file_with_paths=file_with_paths)
 
+@pytest.mark.usefixtures("cleandir")
 def test_nothing_found():
     logger = FakeLogger()
     replace(logger,"/pc/config")
     assert "INFO "+no_process_found_msg== logger.lines[1]
 
-def test_ignore_processes_without_popup_nodes(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_ignore_processes_without_popup_nodes():
     logger = FakeLogger()
-    add_real_file(fs,
-                  logical_process,
-                  "/repo")
-    replace(logger,"/repo")
+    target =full_path("processExamples/EmptyProcess.xml")
+    replace(logger,target)
     assert "INFO "+no_process_found_msg== logger.lines[1]
 
 
-def test_replaces_one_popup(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_replaces_one_popup():
     logger = FakeLogger()
     source=full_path(validation_process)
-    fs.add_real_file(source,read_only=False)
     package_entry = SourceObjectParser().parse(source)
-    assert  package_entry.process_definition.find("PopupQuestionNode")
+    assert  package_entry.process_definition.find("PopupQuestionNode") is not None
     assert  "noCustomersFound" ==package_entry.process_definition.find("PopupQuestionNode").get("name")
     assert  "198" ==package_entry.process_definition.find("PopupQuestionNode").get("x")
     assert  "48" ==package_entry.process_definition.find("PopupQuestionNode").get("y")
@@ -55,7 +70,7 @@ def test_replaces_one_popup(fs):
     assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in package_entry.imports()
     assert  None == package_entry.process_definition.find("PopupQuestionNode")
     message_dialog_node=  package_entry.process_definition.find("ChildProcess") 
-    assert message_dialog_node
+    assert message_dialog_node is not None
     assert "MessageDialog" == message_dialog_node.find("ProcessDefinitionReference").get("name")
     assert "fieldStore0" == package_entry.process_definition.find("ThisNode").get("name")
     assert "148" == package_entry.process_definition.find("ThisNode").get("x")
@@ -72,7 +87,8 @@ def test_replaces_one_popup(fs):
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '"The search criteria retrieved no Customers"' ==\
+    text='<![CDATA["The search criteria retrieved no Customers"]]>'
+    assert text==\
             verbatim.text.strip()
     message_type = data_flow_entries[1].find("FromField")
     parameter_assigment =message_type.find("ParameterAssignment")
@@ -82,7 +98,7 @@ def test_replaces_one_popup(fs):
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert 'MessageDialog.INFORMATION_TYPE' ==\
+    assert '<![CDATA[MessageDialog.INFORMATION_TYPE]]>' ==\
             verbatim.text.strip()
 
     line1 = data_flow.find("DataFlowEntry").find("ToField")
@@ -99,10 +115,10 @@ def test_replaces_one_popup(fs):
     assert "128" == graph_node.get("y")
 
 
-def test_replaces_multiple_popups(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_replaces_multiple_popups():
     logger = FakeLogger()
     source=full_path("processExamples/MultiplePopups.xml")
-    fs.add_real_file(source,read_only=False)
     package_entry = SourceObjectParser().parse(source)
     assert  2 ==len(list(package_entry.process_definition.findall("PopupQuestionNode")))
 
@@ -114,17 +130,14 @@ def test_replaces_multiple_popups(fs):
     assert  None == package_entry.process_definition.find("PopupQuestionNode")
     assert 1 == len(package_entry.process_definition.findall("ThisNode"))
 
-def test_replace_inner_process(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_replace_inner_process():
     logger = FakeLogger()
     source=full_path("processExamples/MainProcess/ValidationProcess/SubValidationProcess.xml")
-    fs.add_real_file(source,read_only=False)
     parent=full_path("processExamples/MainProcess/ValidationProcess.xml")
-    fs.add_real_file(parent,read_only=False)
-
     main=full_path("processExamples/MainProcess.xml")
-    fs.add_real_file(main,read_only=False)
     process_definition = SourceObjectParser().parse(source)
-    assert  process_definition.root.find("PopupQuestionNode")
+    assert  process_definition.root.find("PopupQuestionNode") is not None
 
     replace(logger,os.path.dirname(source))
     process_definition = SourceObjectParser().parse(source)
@@ -134,29 +147,10 @@ def test_replace_inner_process(fs):
     assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[2]
 
 
-@pytest.mark.skip 
-def test_replace_inner_process_with_main_FormProcess(fs):
-    logger = FakeLogger()
-    source=full_path("processExamples/MainFormProcess/ValidationProcess.xml")
-    fs.add_real_file(source,read_only=False)
-    main=full_path("processExamples/MainProcess/ValidationProcess.xml")
-    fs.add_real_file(main,read_only=False)
-
-    process_definition = SourceObjectParser().parse(source)
-    assert  process_definition.root.find("PopupQuestionNode")
-
-    replace(logger,os.path.dirname(source))
-    #process_definition = SourceObjectParser().parse(source)
-    #assert  None == process_definition.root.find("PopupQuestionNode")
-    #main_process = SourceObjectParser().parse(main)
-    #assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in main_process.imports()
-    #assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[2]
-
-
-def test_replace_error_popup(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_replace_error_popup():
     logger = FakeLogger()
     source=full_path("processExamples/SimpleValidationErrorQuestionPopup.xml")
-    fs.add_real_file(source,read_only=False)
     package_entry = SourceObjectParser().parse(source)
     popupquestion =  package_entry.process_definition.find("PopupQuestionNode")
     assert "Error" == popupquestion.get("question")
@@ -176,7 +170,7 @@ def test_replace_error_popup(fs):
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '"The search criteria retrieved no Customers"' ==\
+    assert '<![CDATA["The search criteria retrieved no Customers"]]>' ==\
             verbatim.text.strip()
     message_type = data_flow_entries[1].find("FromField")
     parameter_assigment =message_type.find("ParameterAssignment")
@@ -186,13 +180,13 @@ def test_replace_error_popup(fs):
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert 'MessageDialog.ERROR_TYPE' ==\
+    assert '<![CDATA[MessageDialog.ERROR_TYPE]]>' ==\
             verbatim.text.strip()
 
-def test_replace_formProcess_popup(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_replace_formProcess_popup():
     logger = FakeLogger()
     source=full_path("processExamples/FormProcessQuestionPopup.xml")
-    fs.add_real_file(source,read_only=False)
     package_entry = SourceObjectParser().parse(source)
     popupquestion =  package_entry.process_definition.find("PopupQuestionNode")
     assert "Error" == popupquestion.get("question")
@@ -225,12 +219,11 @@ def test_replace_formProcess_popup(fs):
             verbatim.text.strip()
 
 
-def test_replace_formProcess_popup(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_replace_formProcess_popup():
     logger = FakeLogger()
     source=full_path("processExamples/MainProcess/ValidationFormProcess.xml")
-    fs.add_real_file(source,read_only=False)
     main=full_path("processExamples/MainProcess.xml")
-    fs.add_real_file(main,read_only=False)
 
     form_process = SourceObjectParser().parse(source)
     popupquestion =  form_process.process_definition.find("PopupQuestionNode")
@@ -251,7 +244,7 @@ def test_replace_formProcess_popup(fs):
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '"Please make sure you password is correct"' ==\
+    assert '<![CDATA["Please make sure you password is correct"]]>' ==\
             verbatim.text.strip()
     message_type = data_flow_entries[1].find("FromField")
     parameter_assigment =message_type.find("ParameterAssignment")
@@ -261,19 +254,22 @@ def test_replace_formProcess_popup(fs):
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert 'MessageDialog.ERROR_TYPE' ==\
+    assert '<![CDATA[MessageDialog.ERROR_TYPE]]>' ==\
             verbatim.text.strip()
 
-def test_read_fromfile_popup(fs):
+@pytest.mark.usefixtures("cleandir")
+def test_read_fromfile_popup():
     logger = FakeLogger()
     source=full_path("processExamples/SimpleValidationQuestionPopup.xml")
-    fs.add_real_file(source,read_only=False)
-    fs.create_file("paths.txt",contents=source+"\n")
+    script_dir =os.path.dirname(__file__)
+    paths_file=script_dir+"/tmp/my_paths.txt"
+    with open(paths_file,'w') as f:
+            f.write(source)
 
     package_entry = SourceObjectParser().parse(source)
 
-    replace(logger,file_with_paths="paths.txt")
-    message="Replacing 1 popup(s) for '/home/dgarcia/dev/python/cedtask/test/processExamples/SimpleValidationQuestionPopup.xml'"
+    replace(logger,file_with_paths=paths_file)
+    message="Replacing 1 popup(s) for '/home/dgarcia/dev/python/cedtask/test/tmp/test_processes/processExamples/SimpleValidationQuestionPopup.xml'"
     assert "INFO "+message == logger.lines[1]
     package_entry = SourceObjectParser().parse(source)
     data_flow = package_entry.process_definition.find("DataFlow")

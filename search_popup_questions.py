@@ -1,4 +1,4 @@
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 import sys
 import os
 from collections import defaultdict

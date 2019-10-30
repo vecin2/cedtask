@@ -1,4 +1,4 @@
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 import importlib
 import os
 
@@ -134,7 +134,7 @@ class PackageEntry(BaseProcessDefinition):
     def __init__(self,tree=None,filepath=None):
         super().__init__(tree)
         process_definition = self.root.find("ProcessDefinition")
-        if  process_definition:
+        if  process_definition is not None:
             self.process_definition =process_definition
         else:
             self.process_definition = self.root.find("FormProcess")
