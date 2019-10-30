@@ -58,7 +58,7 @@
           <DataFlowEntry>
             <FromField>
               <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
-                <Verbatim fieldName="text"><![CDATA[MessageDialog.INFORMATION_TYPE]]></Verbatim>
+                <Verbatim fieldName="text"><![CDATA[MessageDialog.ERROR_TYPE]]></Verbatim>
               </ParameterAssignment>
             </FromField>
             <ToField>

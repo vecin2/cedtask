@@ -1,7 +1,0 @@
-/opt/em/projects/Pacificorp/trunk/repository/default/PowerOff/Process/ValidatePrimaryPhoneNumber.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/PowerOff/Process/ValidateCallbackPhoneNumber.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/WebAdmin/Process/ValidateEmailAddress.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/Softphone.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/AppendNumber.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/SimpleValidationQuestionPopup.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/pepe.xml

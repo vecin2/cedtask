@@ -1,3 +1,0 @@
-/opt/em/projects/Pacificorp/trunk/repository/default/ContactHistory/Process/DisplayContactHistory/DisplayCorrespondence/HandleP8Exception.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/Correspondence/Process/ReviewCorrespondence/HandleException.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/Correspondence/Process/CompleteCorrespondence/HandleException.xml

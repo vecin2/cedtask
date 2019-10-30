@@ -16,14 +16,14 @@ def find_popup(filepath):
                 root_tag= tree.getroot().tag
                 list_popups =list(tree.iter("PopupQuestionNode"))
                 if list_popups:
-                    if not list(tree.iter("DataFlow")):
                         popup_question= list_popups[0]
                         positiveButton =popup_question.find("PositiveButton")
                         negativeButton =popup_question.find("NegativeButton")
-                        key = root_tag +\
-                               positiveButton.attrib['text'].strip() +\
-                               negativeButton.attrib['text'].strip()+\
-                               popup_question.attrib['question']
+                        positiveButtonText =popup_question.find("PositiveButton").get("text")
+                        negativeButtonText =popup_question.find("NegativeButton").get("text")
+                        
+                        btn_combi = negativeButtonText.strip() + positiveButtonText.strip()
+                        key = btn_combi.upper() 
                         result[key].append(filepath)
     return result
 def main():

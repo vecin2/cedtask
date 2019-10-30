@@ -14,3 +14,4 @@ class FakeLogger(object):
     @property
     def debug_lines(self):
         return self._debug.split("\n")
+

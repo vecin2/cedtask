@@ -1,4 +1,5 @@
 import sys
+import argparse
 from core.visitors import SourceCodeVisitor
 import xml.etree.ElementTree as ET
 import logging
@@ -47,27 +48,28 @@ class PopupReplacer(SourceCodeVisitor):
         self.logger =logger
         self.result=[]
 
-    def replace(self, filepath):
-        processes =self.visit(filepath)
+    def replace(self, filepath=None,file_with_paths=None):
+        processes =self.visit(filepath,file_with_paths)
         if processes:
-            self.logger.info("1 Processes found containing PopupQuestions")
+            self.logger.info(str(len(processes))+" Processes found containing PopupQuestions")
         else:
             self.logger.info(no_process_found_msg)
 
     def visit_PackageEntry(self,package_entry):
-        self.result.extend(PackageEntryPopupReplacer(package_entry).replaceall())
+        self.result.extend(PackageEntryPopupReplacer(package_entry,self.logger).replaceall())
         return self.result
 
     def visit_ProcessDefinition(self,process_def):
-        self.result.extend(ProcessDefinitionPopupReplacer(process_def).replaceall())
+        self.result.extend(ProcessDefinitionPopupReplacer(process_def,self.logger).replaceall())
         return self.result
     def visit_FormProcess(self,form_process):
-        self.result.extend(FormProcessPopupReplacer(form_process).replaceall())
+        self.result.extend(FormProcessPopupReplacer(form_process,self.logger).replaceall())
         return self.result
 
 class BasePopupReplacer(object):
-    def __init__(self,base_process_definition):
+    def __init__(self,base_process_definition,logger=None):
         self.base_process_def = base_process_definition
+        self.logger =logger
 
     @property
     def process_definition(self):
@@ -75,15 +77,26 @@ class BasePopupReplacer(object):
 
     def replaceall(self):
         result =[]
-        for popup_question_node in self.process_definition.findall("PopupQuestionNode"):
+        popups= self.process_definition.findall("PopupQuestionNode")
+        for popup_question_node in popups:
             if popup_question_node is not None:
                 self.import_new_popup()
-                result.append(self.base_process_def)
                 self.replace_popup(self.base_process_def,popup_question_node,"MessageDialog")
 
             self.base_process_def.save()
 
+        if popups:
+            result.append(self.base_process_def)
+            self.logger.info("Replacing "+str(len(popups))+" popup(s) for '"+self.base_process_def.filepath+"'")
         return result
+
+    def filterOKPopups(self,popup_nodes):
+        for popup in popup_nodes:
+            positiveButton =popup_question.find("PositiveButton").get("text")
+            negativeButton =popup_question.find("NegativeButton").get("text")
+            if positiveButton and negativeButton:
+                btn_combi = negativeButton.strip() + positiveButton.strip()
+                #if btn_combi.upper() == "OK":
 
     def replace_popup(self,process_definition, popup_question_node,new_name):
         message_dialog =process_definition.replace_node_ref(popup_question_node,"MessageDialog")
@@ -122,22 +135,24 @@ class BasePopupReplacer(object):
             return ET.SubElement(process_definition,"ThisNode",displayName="",name="fieldStore0",x=fieldstore_x,y=fieldstore_y)
 
     def get_message_type(self,popup_question_node):
-        question_type =popup_question_node.get("question")
-        if question_type =="Information":
-            return "MessageDialog.INFORMATION_TYPE"
-        elif question_type=="Error":
+        question_type =popup_question_node.get("question").strip()
+        if question_type=="Error":
             return "MessageDialog.ERROR_TYPE"
+        elif question_type=="Warning":
+            return "MessageDialog.WARNING_TYPE"
+        else:
+            return "MessageDialog.INFORMATION_TYPE"
 
 class FormProcessPopupReplacer(BasePopupReplacer):
-    def __init__(self,base_process_definition):
-        super().__init__(base_process_definition)
+    def __init__(self,base_process_definition,logger=None):
+        super().__init__(base_process_definition,logger)
 
     def import_new_popup(self):
         self.base_process_def.add_import("FrameworkCommon.API.PopUpQuestion.MessageDialog")
 
 class ProcessDefinitionPopupReplacer(BasePopupReplacer):
-    def __init__(self,base_process_definition):
-        super().__init__(base_process_definition)
+    def __init__(self,base_process_definition,logger=None):
+        super().__init__(base_process_definition,logger)
 
     def import_new_popup(self):
         main_process =self.base_process_def.get_main_process()
@@ -145,8 +160,8 @@ class ProcessDefinitionPopupReplacer(BasePopupReplacer):
         main_process.save()
 
 class PackageEntryPopupReplacer(BasePopupReplacer):
-    def __init__(self,base_process_definition):
-        super().__init__(base_process_definition)
+    def __init__(self,base_process_definition,logger=None):
+        super().__init__(base_process_definition,logger)
 
 
     def import_new_popup(self):
@@ -173,7 +188,7 @@ def _build_console_log_handler(formatter,is_verbose):
 
 def _build_file_log_handler(formatter):
         file_handler=RotatingFileHandler(
-                                        "update_repre.log",
+                                        "replace_popups.log",
                                         maxBytes=10*1024*1024,
                                         backupCount=2)
         file_handler.setFormatter(formatter)
@@ -181,13 +196,19 @@ def _build_file_log_handler(formatter):
         return file_handler
 
 def replace():
-    filesystem_path =sys.argv[1]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("filesystem_path",nargs='?')
+    parser.add_argument("--file-with-paths")
+    parser.add_argument("-v",action="store_true")
+    args =parser.parse_args()
+    filesystem_path = args.filesystem_path
+    file_with_paths = args.file_with_paths
     verbose =""
     if len(sys.argv) >2:
         verbose = sys.argv[2]
-    logger = _build_logger(verbose=="-v")
+    logger = _build_logger(args.v)
     popup_replacer = PopupReplacer(logger)
-    popup_replacer.replace(filesystem_path)
+    popup_replacer.replace(filesystem_path,file_with_paths)
 
 if __name__ == "__main__":
     replace()

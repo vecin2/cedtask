@@ -4,12 +4,17 @@ import xml.etree.ElementTree as ET
 from core.objects import ProcessDefinition,SourceObjectParser
 
 class SourceCodeVisitor(object):
-
     def get_visitor(self, tree):
         method = 'visit_' + tree.getroot().tag
         return getattr(self, method, None)
 
-    def visit(self,filesystem_path):
+    def visit(self,filesystem_path=None,file_with_paths=None):
+        if filesystem_path:
+            return self.visit_path(filesystem_path)
+        else:
+            return self.visit_file_with_paths(file_with_paths)
+
+    def visit_path(self, filesystem_path):
         exclude_directories = set(['Resources'])
         result = None
         if os.path.isfile(filesystem_path):
@@ -22,6 +27,13 @@ class SourceCodeVisitor(object):
                 result =self.visit_file(dirpath,name)
         return result
 
+    def visit_file_with_paths(self,file_with_paths):
+        result =[]
+        with open(file_with_paths,'r') as f:
+            for line in f:
+                line_content=line.rstrip('\n')
+                result = self.visit_file(os.path.dirname(line_content),os.path.basename(line_content))
+        return result
     def visit_file(self,dirpath,name):
         if name.lower().endswith(".xml"):
             filepath=os.path.join(dirpath, name)

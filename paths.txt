@@ -1,0 +1,2 @@
+/home/dgarcia/dev/python/cedtask/test/processExamples/simple/SimpleValidationQuestionPopup1.xml
+/home/dgarcia/dev/python/cedtask/test/processExamples/simple/MultiplePopups1.xml

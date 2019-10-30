@@ -20,9 +20,9 @@ def add_real_file(fs, relative_path, fake_path=None):
 logical_process="processExamples/SimpleValidationMessageDialog.xml"
 validation_process="processExamples/SimpleValidationQuestionPopup.xml"
 
-def replace(logger,filesystem_path):
+def replace(logger,filesystem_path=None,file_with_paths=None):
     popup_replacer = PopupReplacer(logger)
-    popup_replacer.replace(filesystem_path)
+    popup_replacer.replace(filesystem_path,file_with_paths=file_with_paths)
 
 def test_nothing_found():
     logger = FakeLogger()
@@ -49,7 +49,8 @@ def test_replaces_one_popup(fs):
     assert  "48" ==package_entry.process_definition.find("PopupQuestionNode").get("y")
 
     replace(logger,os.path.dirname(source))
-    assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[1]
+    assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[2]
+    assert "INFO Replacing 1 popup(s) for '"+source+"'"== logger.lines[1]
     package_entry = SourceObjectParser().parse(source)
     assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in package_entry.imports()
     assert  None == package_entry.process_definition.find("PopupQuestionNode")
@@ -106,7 +107,8 @@ def test_replaces_multiple_popups(fs):
     assert  2 ==len(list(package_entry.process_definition.findall("PopupQuestionNode")))
 
     replace(logger,os.path.dirname(source))
-    assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[1]
+    assert "INFO Replacing 2 popup(s) for '"+source+"'"== logger.lines[1]
+    assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[2]
     package_entry = SourceObjectParser().parse(source)
     assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in package_entry.imports()
     assert  None == package_entry.process_definition.find("PopupQuestionNode")
@@ -129,7 +131,7 @@ def test_replace_inner_process(fs):
     assert  None == process_definition.root.find("PopupQuestionNode")
     main_process = SourceObjectParser().parse(main)
     assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in main_process.imports()
-    assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[1]
+    assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[2]
 
 
 def test_replace_error_popup(fs):
@@ -242,3 +244,18 @@ def test_replace_formProcess_popup(fs):
     assert "text" == verbatim.get("fieldName")
     assert 'MessageDialog.ERROR_TYPE' ==\
             verbatim.text.strip()
+
+def test_read_fromfile_popup(fs):
+    logger = FakeLogger()
+    source=full_path("processExamples/SimpleValidationQuestionPopup.xml")
+    fs.add_real_file(source,read_only=False)
+    fs.create_file("paths.txt",contents=source+"\n")
+
+    package_entry = SourceObjectParser().parse(source)
+
+    replace(logger,file_with_paths="paths.txt")
+    message="Replacing 1 popup(s) for '/home/dgarcia/dev/python/cedtask/test/processExamples/SimpleValidationQuestionPopup.xml'"
+    assert "INFO "+message == logger.lines[1]
+    package_entry = SourceObjectParser().parse(source)
+    data_flow = package_entry.process_definition.find("DataFlow")
+    assert "fieldStore0" == data_flow.find("FromNode").get("name")
