@@ -97,6 +97,8 @@ class FormProcess(BaseProcessDefinition):
         self.add_packages(path_array,package_specifier)
 
     def add_import(self,path,name=None):
+        if path in self.imports():
+            return
         path_array= path.split(".")
         if not name:
             name =path_array[-1]
@@ -152,6 +154,8 @@ class PackageEntry(BaseProcessDefinition):
         self.add_packages(path_array,package_specifier)
 
     def add_import(self,path,name=None):
+        if path in self.imports():
+            return
         path_array= path.split(".")
         if not name:
             name =path_array[-1]

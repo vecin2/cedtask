@@ -87,7 +87,7 @@ def test_replaces_one_popup(fs):
 
     line1 = data_flow.find("DataFlowEntry").find("ToField")
     assert "line1" == line1.find("FieldDefinitionReference").get("name")
-    assert "The search criteria retrieved no Customers" 
+    assert "The search criteria retrieved no Customers"
     graph_node_list=data_flow.find("GraphNodeList")
     assert "" == graph_node_list.get("name")
     graph_node =graph_node_list.find("GraphNode")
@@ -132,6 +132,25 @@ def test_replace_inner_process(fs):
     main_process = SourceObjectParser().parse(main)
     assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in main_process.imports()
     assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[2]
+
+
+@pytest.mark.skip 
+def test_replace_inner_process_with_main_FormProcess(fs):
+    logger = FakeLogger()
+    source=full_path("processExamples/MainFormProcess/ValidationProcess.xml")
+    fs.add_real_file(source,read_only=False)
+    main=full_path("processExamples/MainProcess/ValidationProcess.xml")
+    fs.add_real_file(main,read_only=False)
+
+    process_definition = SourceObjectParser().parse(source)
+    assert  process_definition.root.find("PopupQuestionNode")
+
+    replace(logger,os.path.dirname(source))
+    #process_definition = SourceObjectParser().parse(source)
+    #assert  None == process_definition.root.find("PopupQuestionNode")
+    #main_process = SourceObjectParser().parse(main)
+    #assert "FrameworkCommon.API.PopUpQuestion.MessageDialog" in main_process.imports()
+    #assert "INFO 1 Processes found containing PopupQuestions"== logger.lines[2]
 
 
 def test_replace_error_popup(fs):

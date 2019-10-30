@@ -31,7 +31,11 @@ def find_popup(filepath):
     return result
 def main():
     path =sys.argv[1]
-    folder = sys.argv[2]
+    if len(sys.argv) >2:
+        folder = sys.argv[2]
+    else:
+        folder ="results"
+
     results = find_popup(path)
     if not os.path.exists(folder):
         os.makedirs(folder)

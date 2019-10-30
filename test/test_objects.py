@@ -32,6 +32,17 @@ def test_add_import_to_existing_imports(fs):
     package_entry.add_import(import3)
     assert [import3,import1,import2] == package_entry.imports()
 
+def test_add_duplicate_import_adds_nothing(fs):
+    source=full_path("processExamples/EmptyProcess.xml")
+    fs.add_real_file(source)
+    package_entry = SourceObjectParser().parse(source)
+    import3='FrameworkCommon.API.PopUpQuestion.ConfirmationDialog'
+    package_entry.add_import(import3)
+
+    package_entry.add_import(import3)
+
+    assert [import3] == package_entry.imports()
+
 def test_get_package_entry_from_process_definition(fs):
     source=full_path("processExamples/MainProcess/ValidationProcess.xml")
     fs.add_real_file(source)
