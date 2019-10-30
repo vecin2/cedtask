@@ -1,0 +1,2 @@
+test/processExamples/simple/MainProcess/ValidationFormProcess.xml
+test/processExamples/MainProcess/ValidationFormProcess.xml

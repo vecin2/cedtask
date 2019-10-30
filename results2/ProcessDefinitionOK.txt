@@ -1,0 +1,4 @@
+test/processExamples/simple/MainProcess/ValidationProcess.xml
+test/processExamples/simple/MainProcess/ValidationProcess/SubValidationProcess.xml
+test/processExamples/MainProcess/ValidationProcess.xml
+test/processExamples/MainProcess/ValidationProcess/SubValidationProcess.xml

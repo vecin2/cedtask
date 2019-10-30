@@ -1,0 +1,2 @@
+/opt/em/projects/Pacificorp/trunk/repository/default/Admin/Process/Correspondence/ManageStdTokenValue.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/PacificorpCoreEntities/ManageTextNumber/ViewTextNumber.xml

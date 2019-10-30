@@ -1,0 +1,9 @@
+/opt/em/projects/Pacificorp/trunk/repository/default/PowerOff/Process/OutageSelectCity/SelectCity.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/WrapUp/Process/WrapUp/WorkQueueOutcome/WrapUpOutcome.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/OutboundDialler/Process/JR30OutboundCall/JR30Contacts.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/OutboundDialler/Process/JR30OutboundCall/JR30NoMessageLeft.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/Telephony/HandleInternalCall/InternalCall.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/Softphone/SoftphoneMain/MultipleCallRetrieve/MultipleRetrieve.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/ScreenPop/Password.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/ScreenPop/Password/PasswordVerification.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/MainProcess/ValidationFormProcess.xml

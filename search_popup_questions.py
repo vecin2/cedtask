@@ -21,15 +21,18 @@ def find_popup(filepath):
                         negativeButton =popup_question.find("NegativeButton")
                         positiveButtonText =popup_question.find("PositiveButton").get("text")
                         negativeButtonText =popup_question.find("NegativeButton").get("text")
-                        
                         btn_combi = negativeButtonText.strip() + positiveButtonText.strip()
-                        key = btn_combi.upper() 
+                        tail=""
+                        if root_tag == "PackageEntry":
+                            if list(tree.iter("FormProcess")):
+                                tail="FormProcess"
+                        key = root_tag + tail +btn_combi.upper()
                         result[key].append(filepath)
     return result
 def main():
     path =sys.argv[1]
+    folder = sys.argv[2]
     results = find_popup(path)
-    folder ="results2"
     if not os.path.exists(folder):
         os.makedirs(folder)
     for key,value in results.items():

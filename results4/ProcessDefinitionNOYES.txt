@@ -1,4 +1,3 @@
-/opt/em/projects/Pacificorp/trunk/repository/default/Admin/Process/Correspondence/ManageStdTokenValue.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Admin/Process/Correspondence/ManageToken/CancelManageToken.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Admin/Process/Correspondence/SelectValidation/CancelValidation.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Admin/Process/Correspondence/SelectToken/CancelSelectToken.xml
@@ -8,10 +7,8 @@
 /opt/em/projects/Pacificorp/trunk/repository/default/Login/Process/Login/ExitApplication.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/PowerOff/Process/OutageMatchReport/ValidateOutageMatchReport/ValidateCustomerInfo.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/AutoCustomerCallback/Process/ACCAdmin/HandleUpdateClick.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/PacificorpCoreEntities/ManageTextNumber/ViewTextNumber.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/Softphone/SoftphoneMain/CheckJR30.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/Softphone/SoftphoneMain/DropLastCall/ConfirmDropCall.xml
-/opt/em/projects/Pacificorp/trunk/repository/default/JR129/Process/Done.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Correspondence/Process/ManageAlternateAddress/Cancel.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Correspondence/Process/CorrespondenceHome/Cancel.xml
 /opt/em/projects/Pacificorp/trunk/repository/default/Correspondence/Process/CorrespondenceHome/AlternateAddress/UpdateAlternateAddressList/ConfirmDeleteAddress.xml

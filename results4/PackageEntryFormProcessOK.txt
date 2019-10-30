@@ -1,0 +1,11 @@
+/opt/em/projects/Pacificorp/trunk/repository/default/Admin/Process/Correspondence/SelectDataRetrievalProcess.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Toolbar/Process/Whenever.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/Softphone.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Telephony/Process/ReloadCallData.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Process/OutOfRouteReads/ViewOutOfRouteReads.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Process/MeterRead/MeterReadOutcome.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/FormProcessQuestionPopup.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Common/Process/SelectCity.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Common/Process/SelectDomainDescription.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Common/Process/SelectDomainDescriptionWithOutCode.xml
+/opt/em/projects/Pacificorp/trunk/repository/default/Common/Process/SelectState.xml
