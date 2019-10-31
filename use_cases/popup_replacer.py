@@ -111,7 +111,6 @@ class BasePopupReplacer(object):
                      y=node_y)
 
     def get_field_store_for(self,process_definition,message_dialog):
-        import pdb;pdb.set_trace() 
         fieldstore = process_definition.find("ThisNode")
         if fieldstore is not None:
             return fieldstore
