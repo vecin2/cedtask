@@ -9,7 +9,6 @@ def find_popup(filepath):
     for dirpath, dirnames, files in os.walk(filepath):
         dirnames[:] = [d for d in dirnames if d not in exclude_directories]
         for name in files:
-            print(dirpath+name)
             if name.lower().endswith(".xml"):
                 filepath=os.path.join(dirpath, name)
                 tree = ET.parse(filepath)
