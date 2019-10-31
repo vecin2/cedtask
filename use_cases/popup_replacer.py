@@ -89,7 +89,7 @@ class BasePopupReplacer(object):
         field_store =self.get_field_store_for(process_definition,message_dialog)
 
         data_flow =ET.SubElement(process_definition,"DataFlow")
-        from_node = ET.SubElement(data_flow,"FromNode",name="fieldStore0")
+        from_node = ET.SubElement(data_flow,"FromNode",name=field_store.get("name"))
         to_node = ET.SubElement(data_flow,"ToNode",name=message_dialog.get("name"))
         make_data_flow_entry(data_flow,
                              '"'+popup_question_node.get("text")+'"',
@@ -111,6 +111,7 @@ class BasePopupReplacer(object):
                      y=node_y)
 
     def get_field_store_for(self,process_definition,message_dialog):
+        import pdb;pdb.set_trace() 
         fieldstore = process_definition.find("ThisNode")
         if fieldstore is not None:
             return fieldstore
