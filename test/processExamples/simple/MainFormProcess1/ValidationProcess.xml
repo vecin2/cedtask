@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ProcessDefinition [] >
 <ProcessDefinition appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="ValidationProcess" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
-      <ProcessDefinition name="SubValidationProcess" nested="true" />
-      <StartNode displayName="" name="" x="16" y="32" />
-      <EndNode displayName="" name="" x="240" y="32" />
+      <ProcessDefinition name="SubValidationProcess" nested="true"/>
+      <StartNode displayName="" name="" x="16" y="32"/>
+      <EndNode displayName="" name="" x="240" y="32"/>
       <ChildProcess displayName="" executeAsAsynchronous="false" name="accountInvalid" waitOnParent="false" x="159" y="154">
-        <ProcessDefinitionReference name="MessageDialog" />
+        <ProcessDefinitionReference name="MessageDialog"/>
       </ChildProcess>
       <Transition isExceptionTransition="false">
-        <StartNodeReference name="" />
-        <EndNodeReference name="" />
+        <StartNodeReference name=""/>
+        <EndNodeReference name=""/>
         <GraphNodeList name="">
-          <GraphNode icon="" isLabelHolder="true" label="" name="" x="128" y="32" />
+          <GraphNode icon="" isLabelHolder="true" label="" name="" x="128" y="32"/>
         </GraphNodeList>
       </Transition>
-      <BuilderInfo name="" />
-      <TopicScope defineTopicScope="false" name="" />
-      <ThisNode displayName="" name="fieldStore0" x="109" y="234" />
+      <BuilderInfo name=""/>
+      <TopicScope defineTopicScope="false" name=""/>
+      <ThisNode displayName="" name="fieldStore0" x="109" y="234"/>
       <DataFlow>
-        <FromNode name="fieldStore0" />
-        <ToNode name="accountInvalid" />
+        <FromNode name="fieldStore0"/>
+        <ToNode name="accountInvalid"/>
         <DataFlowEntry>
           <FromField>
             <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
@@ -27,7 +27,7 @@
             </ParameterAssignment>
           </FromField>
           <ToField>
-            <FieldDefinitionReference name="line1" />
+            <FieldDefinitionReference name="line1"/>
           </ToField>
         </DataFlowEntry>
         <DataFlowEntry>
@@ -37,11 +37,11 @@
             </ParameterAssignment>
           </FromField>
           <ToField>
-            <FieldDefinitionReference name="messageType" />
+            <FieldDefinitionReference name="messageType"/>
           </ToField>
         </DataFlowEntry>
         <GraphNodeList name="">
-          <GraphNode icon="" isLabelHolder="true" label="" name="" x="159" y="234" />
+          <GraphNode icon="" isLabelHolder="true" label="" name="" x="159" y="234"/>
         </GraphNodeList>
       </DataFlow>
     </ProcessDefinition>

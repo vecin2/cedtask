@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FormProcess [] >
+<PackageEntry>
+      <ImportDeclaration name="MessageDialog">
+        <PackageSpecifier name="">
+          <PackageName name="FrameworkCommon"/>
+          <PackageName name="API"/>
+          <PackageName name="PopUpQuestion"/>
+        </PackageSpecifier>
+        <PackageEntryReference name="MessageDialog"/>
+      </ImportDeclaration>
+      <FormProcess appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="FormProcessQuestionPopup" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
+        <InstanceFields>
+          <ObjectField isAggregate="false" isAttribute="false" name="formHolder">
+            <ObjectField_loc locale="">
+              <Format/>
+            </ObjectField_loc>
+            <TypeDefinitionReference name="GTFormHolderControl" nested="false"/>
+          </ObjectField>
+          <FormField isAggregate="false" isAttribute="false" name="form">
+            <FormField_loc locale="">
+              <Format/>
+            </FormField_loc>
+            <TypeDefinitionReference name="FormProcessQuestionPopupForm" nested="false"/>
+          </FormField>
+        </InstanceFields>
+        <Form name="FormProcessQuestionPopupForm" nested="true"/>
+        <StartNode displayName="" name="" x="22" y="32"/>
+        <EndNode displayName="" name="" x="246" y="32"/>
+        <ChildProcess displayName="" executeAsAsynchronous="false" name="invalidUsername" waitOnParent="false" x="182" y="32">
+          <ProcessDefinitionReference name="MessageDialog"/>
+        </ChildProcess>
+        <Transition isExceptionTransition="false">
+          <StartNodeReference name=""/>
+          <ToNode name="invalidUsername"/>
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="134" y="32"/>
+          </GraphNodeList>
+        </Transition>
+        <Transition isExceptionTransition="false" name="transition0">
+          <FromNode name="invalidUsername"/>
+          <EndNodeReference name=""/>
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="208" y="32"/>
+          </GraphNodeList>
+        </Transition>
+        <Parameter from="" name="formHolder" to=""/>
+        <BuilderInfo name=""/>
+        <TopicScope defineTopicScope="false" name=""/>
+        <FormReference name="FormProcessQuestionPopupForm" nested="false"/>
+        <ThisNode displayName="" name="fieldStore0" x="132" y="112"/>
+        <DataFlow>
+          <FromNode name="fieldStore0"/>
+          <ToNode name="invalidUsername"/>
+          <DataFlowEntry>
+            <FromField>
+              <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
+                <Verbatim fieldName="text"><![CDATA["The usename is not valid"]]></Verbatim>
+              </ParameterAssignment>
+            </FromField>
+            <ToField>
+              <FieldDefinitionReference name="line1"/>
+            </ToField>
+          </DataFlowEntry>
+          <DataFlowEntry>
+            <FromField>
+              <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
+                <Verbatim fieldName="text"><![CDATA[MessageDialog.ERROR_TYPE]]></Verbatim>
+              </ParameterAssignment>
+            </FromField>
+            <ToField>
+              <FieldDefinitionReference name="messageType"/>
+            </ToField>
+          </DataFlowEntry>
+          <GraphNodeList name="">
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="182" y="112"/>
+          </GraphNodeList>
+        </DataFlow>
+      </FormProcess>
+    </PackageEntry>
+    

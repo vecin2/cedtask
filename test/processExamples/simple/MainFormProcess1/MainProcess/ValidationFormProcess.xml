@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ProcessDefinition [] >
-  <ProcessDefinition
+<!DOCTYPE FormProcess [] >
+  <FormProcess
       appearsInHistory="true"
       cyclic="false"
       designNotes="Undefined"
@@ -8,12 +8,41 @@
       icon=""
       isPrivate="false"
       logicalDatabaseConnection=""
-      name="SubValidationProcess"
+      name="ValidationFormProcess"
       nested="false"
       pointOfNoReturn="false"
       transactionBehaviour="TX_NOT_SUPPORTED"
       version="10"
       waitOnChildren="false">
+    <InstanceFields>
+      <ObjectField
+          isAggregate="false"
+          isAttribute="false"
+          name="formHolder">
+        <ObjectField_loc
+            locale="">
+          <Format />
+        </ObjectField_loc>
+        <TypeDefinitionReference
+            name="GTFormHolderControl"
+            nested="false" />
+      </ObjectField>
+      <FormField
+          isAggregate="false"
+          isAttribute="false"
+          name="form">
+        <FormField_loc
+            locale="">
+          <Format />
+        </FormField_loc>
+        <TypeDefinitionReference
+            name="ValidationFormProcessForm"
+            nested="false" />
+      </FormField>
+    </InstanceFields>
+    <Form
+        name="ValidationFormProcessForm"
+        nested="true" />
     <StartNode
         displayName=""
         name=""
@@ -22,13 +51,13 @@
     <EndNode
         displayName=""
         name=""
-        x="272"
+        x="246"
         y="32" />
     <PopupQuestionNode
-        displayName=""
-        name="expiredAgreement"
-        question="Information"
-        text="This agreement has expired"
+        displayName="invalidPassword"
+        name="invalidPassword"
+        question="Error"
+        text="Please make sure you password is correct"
         x="182"
         y="32">
       <PositiveButton
@@ -45,7 +74,7 @@
       <StartNodeReference
           name="" />
       <ToNode
-          name="expiredAgreement" />
+          name="invalidPassword" />
       <GraphNodeList
           name="">
         <GraphNode
@@ -61,7 +90,7 @@
         isExceptionTransition="false"
         name="transition0">
       <FromNode
-          name="expiredAgreement" />
+          name="invalidPassword" />
       <EndNodeReference
           name="" />
       <GraphNodeList
@@ -71,13 +100,24 @@
             isLabelHolder="true"
             label=""
             name=""
-            x="240"
+            x="208"
             y="32" />
       </GraphNodeList>
     </Transition>
+    <Parameter
+        from=""
+        name="formHolder"
+        to="" />
+    <Parameter
+        from=""
+        name="formHolder"
+        to="" />
     <BuilderInfo
         name="" />
     <TopicScope
         defineTopicScope="false"
         name="" />
-  </ProcessDefinition>
+    <FormReference
+        name="ValidationFormProcessForm"
+        nested="false" />
+  </FormProcess>

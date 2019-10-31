@@ -3,50 +3,49 @@
 <PackageEntry>
       <ImportDeclaration name="MessageDialog">
         <PackageSpecifier name="">
-          <PackageName name="FrameworkCommon" />
-          <PackageName name="API" />
-          <PackageName name="PopUpQuestion" />
+          <PackageName name="FrameworkCommon"/>
+          <PackageName name="API"/>
+          <PackageName name="PopUpQuestion"/>
         </PackageSpecifier>
-        <PackageEntryReference name="MessageDialog" />
+        <PackageEntryReference name="MessageDialog"/>
       </ImportDeclaration>
-      <ImportDeclaration name="MessageDialog">
+      <ImportDeclaration name="ValidateAdjustmentReason">
         <PackageSpecifier name="">
-          <PackageName name="FrameworkCommon" />
-          <PackageName name="API" />
-          <PackageName name="PopUpQuestion" />
+          <PackageName name="ReadsInvoicesUsage"/>
+          <PackageName name="Process"/>
         </PackageSpecifier>
-        <PackageEntryReference name="MessageDialog" />
+        <PackageEntryReference name="ValidateAdjustmentReason"/>
       </ImportDeclaration>
       <FormProcess appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="MainFormProcess" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
         <InstanceFields>
           <ObjectField isAggregate="false" isAttribute="false" name="formHolder">
             <ObjectField_loc locale="">
-              <Format />
+              <Format/>
             </ObjectField_loc>
-            <TypeDefinitionReference name="GTFormHolderControl" nested="false" />
+            <TypeDefinitionReference name="GTFormHolderControl" nested="false"/>
           </ObjectField>
           <FormField isAggregate="false" isAttribute="false" name="form">
             <FormField_loc locale="">
-              <Format />
+              <Format/>
             </FormField_loc>
-            <TypeDefinitionReference name="MainFormProcessForm" nested="false" />
+            <TypeDefinitionReference name="MainFormProcessForm" nested="false"/>
           </FormField>
         </InstanceFields>
-        <Form name="MainFormProcessForm" nested="true" />
-        <ProcessDefinition name="ValidationProcess" nested="true" />
-        <StartNode displayName="" name="" x="16" y="32" />
-        <EndNode displayName="" name="" x="240" y="32" />
+        <Form name="MainFormProcessForm" nested="true"/>
+        <ProcessDefinition name="ValidationProcess" nested="true"/>
+        <StartNode displayName="" name="" x="16" y="32"/>
+        <EndNode displayName="" name="" x="240" y="32"/>
         <Transition isExceptionTransition="false">
-          <StartNodeReference name="" />
-          <EndNodeReference name="" />
+          <StartNodeReference name=""/>
+          <EndNodeReference name=""/>
           <GraphNodeList name="">
-            <GraphNode icon="" isLabelHolder="true" label="" name="" x="128" y="32" />
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="128" y="32"/>
           </GraphNodeList>
         </Transition>
-        <Parameter from="" name="formHolder" to="" />
-        <BuilderInfo name="" />
-        <TopicScope defineTopicScope="false" name="" />
-        <FormReference name="MainFormProcessForm" nested="false" />
+        <Parameter from="" name="formHolder" to=""/>
+        <BuilderInfo name=""/>
+        <TopicScope defineTopicScope="false" name=""/>
+        <FormReference name="MainFormProcessForm" nested="false"/>
       </FormProcess>
     </PackageEntry>
     

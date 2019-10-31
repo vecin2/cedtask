@@ -220,7 +220,7 @@ def test_replace_formProcess_popup():
 
 
 @pytest.mark.usefixtures("cleandir")
-def test_replace_formProcess_popup():
+def test_replace_inner_formProcess_popup():
     logger = FakeLogger()
     source=full_path("processExamples/MainProcess/ValidationFormProcess.xml")
     main=full_path("processExamples/MainProcess.xml")
@@ -232,6 +232,7 @@ def test_replace_formProcess_popup():
     replace(logger,os.path.dirname(source))
 
     package_entry = SourceObjectParser().parse(source)
+    assert ["FrameworkCommon.API.PopUpQuestion.MessageDialog"] ==package_entry.get_main_process().imports()
     data_flow = package_entry.process_definition.find("DataFlow")
     assert "fieldStore0" == data_flow.find("FromNode").get("name")
     assert "invalidPassword" == data_flow.find("ToNode").get("name")

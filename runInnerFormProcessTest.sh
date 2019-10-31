@@ -18,11 +18,11 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
-cp -r /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/MainFormProcess.xml test/processExamples/simple/MainFormProcess1.xml
-rm -rf test/processExamples/simple/MainFormProcess1
-cp -r /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/MainFormProcess/ test/processExamples/simple/MainFormProcess1
-python use_cases/popup_replacer.py ~/dev/python/cedtask/test/processExamples/simple/MainFormProcess1
-cp test/processExamples/simple/MainFormProcess1.xml  /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test
-rm -rf /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/MainFormProcess1
-cp -r test/processExamples/simple/MainFormProcess1/  /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test
+cp -r /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/MainProcess.xml test/processExamples/simple/MainProcess1.xml
+rm -rf test/processExamples/simple/MainProcess1
+cp -r /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/MainProcess/ test/processExamples/simple/MainProcess1
+python use_cases/popup_replacer.py ~/dev/python/cedtask/test/processExamples/simple/MainProcess1/ValidationFormProcess.xml
+cp test/processExamples/simple/MainProcess1.xml  /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test
+rm -rf /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test/MainProcess1
+cp -r test/processExamples/simple/MainProcess1/  /opt/em/projects/Pacificorp/trunk/repository/default/ReadsInvoicesUsage/Test
 

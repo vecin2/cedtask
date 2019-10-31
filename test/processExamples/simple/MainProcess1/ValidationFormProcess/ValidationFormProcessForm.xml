@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Form [] >
+  <Form
+      centred="true"
+      closable="true"
+      designNotes="Undefined"
+      events="31"
+      iconisable="true"
+      lockAll="false"
+      lockOnAction="true"
+      maximisable="true"
+      maximiseOnStart="false"
+      minimiseOnStart="false"
+      modal="false"
+      name="ValidationFormProcessForm"
+      naturalSizeTabImage="false"
+      nested="false"
+      resizable="true"
+      restorable="true"
+      screenRelative="false"
+      showHints="true"
+      staticForm="true"
+      stayUp="false"
+      version="5.3.0">
+    <TranslationCatalogueKey
+        key="jGwnOi4M5k0d2XZM2Zqto7"
+        namespace="ReadsInvoicesUsage_Auto" />
+    <TabOrder
+        tabLocal="false" />
+    <Pane
+        name="pane0">
+      <Layout
+          validLayout="true" />
+      <Pane_loc
+          height="400"
+          locale=""
+          minimumHeight="0"
+          minimumWidth="0"
+          width="400"
+          xCoord="0"
+          yCoord="0" />
+    </Pane>
+    <Form_loc
+        height="525"
+        iconSource=""
+        locale=""
+        padding="0"
+        shortTitle="Short Form Title"
+        title="Form Title"
+        titleAlignment="CENTRE"
+        units="PIXELS"
+        useTabImage="false"
+        width="790"
+        xCoord="0"
+        yCoord="0">
+      <BackgroundColour />
+    </Form_loc>
+  </Form>

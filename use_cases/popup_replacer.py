@@ -133,7 +133,10 @@ class FormProcessPopupReplacer(BasePopupReplacer):
         super().__init__(base_process_definition,logger)
 
     def import_new_popup(self):
-        self.base_process_def.add_import("FrameworkCommon.API.PopUpQuestion.MessageDialog")
+        self.logger.info("Adding import to parent process "+self.base_process_def.filepath)
+        main_process =self.base_process_def.get_main_process()
+        main_process.add_import("FrameworkCommon.API.PopUpQuestion.MessageDialog")
+        main_process.save()
 
 class ProcessDefinitionPopupReplacer(BasePopupReplacer):
     def __init__(self,base_process_definition,logger=None):

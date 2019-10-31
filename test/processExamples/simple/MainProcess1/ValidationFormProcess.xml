@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ProcessDefinition [] >
 <FormProcess appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="ValidationFormProcess" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
+      <ImportDeclaration name="MessageDialog">
+        <PackageSpecifier name="">
+          <PackageName name="FrameworkCommon"/>
+          <PackageName name="API"/>
+          <PackageName name="PopUpQuestion"/>
+        </PackageSpecifier>
+        <PackageEntryReference name="MessageDialog"/>
+      </ImportDeclaration>
       <InstanceFields>
         <ObjectField isAggregate="false" isAttribute="false" name="formHolder">
           <ObjectField_loc locale="">

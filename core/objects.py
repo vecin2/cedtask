@@ -80,10 +80,24 @@ class BaseProcessDefinition(object):
         with open(self.filepath,"w") as xml_file:
             xml_file.write(xml_doc)
 
+    def get_main_process(self):
+        return self._get_outer_process(self.filepath)
+
+    def _get_outer_process(self,filepath):
+        parent_folder=os.path.dirname(filepath)
+        if filepath == parent_folder:
+            return None
+        if os.path.isfile(parent_folder+".xml"):
+            ced_object = SourceObjectParser().parse(parent_folder+".xml")
+            if type(ced_object) is PackageEntry:
+                return ced_object
+        return self._get_outer_process(parent_folder)
+
 class FormProcess(BaseProcessDefinition):
     def __init__(self,tree=None,filepath=None):
         super().__init__(tree)
         self.process_definition = self.root
+        self.doc_type ="FormProcess"
     def add_packages(self,path_array,package_specifier):
         del path_array[-1]
         for packagename in path_array:
@@ -116,19 +130,6 @@ class ProcessDefinition(BaseProcessDefinition):
     def __init__(self,tree=None,filepath=None):
         super().__init__(tree)
         self.process_definition = self.root
-
-    def get_main_process(self):
-        return self._get_outer_process(self.filepath)
-
-    def _get_outer_process(self,filepath):
-        parent_folder=os.path.dirname(filepath)
-        if filepath == parent_folder:
-            return None
-        if os.path.isfile(parent_folder+".xml"):
-            ced_object = SourceObjectParser().parse(parent_folder+".xml")
-            if type(ced_object) is PackageEntry:
-                return ced_object
-        return self._get_outer_process(parent_folder)
 
 
 class PackageEntry(BaseProcessDefinition):
