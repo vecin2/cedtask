@@ -38,7 +38,7 @@ class SourceCodeVisitor(object):
         if name.lower().endswith(".xml"):
             filepath=os.path.join(dirpath, name)
             parser = ET.XMLParser(strip_cdata=False)
-            tree=ET.parse(filepath)
+            tree=ET.parse(filepath,parser)
             f = self.get_visitor(tree)
             if f is not None:
                 ced_object=SourceObjectParser().parse_xml_tree(tree)

@@ -6,7 +6,8 @@ from core.xml import indent
 
 class SourceObjectParser(object):
     def parse(self,filepath):
-        tree =ET.parse(filepath)
+        parser = ET.XMLParser(strip_cdata=False)
+        tree =ET.parse(filepath,parser)
         ced_object = self.parse_xml_tree(tree)
         ced_object.filepath = filepath
         return ced_object
@@ -74,7 +75,7 @@ class BaseProcessDefinition(object):
         header=('<?xml version="1.0" encoding="UTF-8"?>\n'
                 '<!DOCTYPE '+self.doc_type+' [] >\n')
         indent(self.root,2)
-        root_str=ET.tostring(self.root,pretty_print=True,encoding='unicode')
+        root_str=ET.tostring(self.root,encoding='unicode')
         xml_doc=header +root_str
         with open(self.filepath,"w") as xml_file:
             xml_file.write(xml_doc)

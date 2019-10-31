@@ -5,21 +5,6 @@ import lxml.etree as ET
 import logging
 from logging.handlers import RotatingFileHandler
 
-def _escape_cdata(text):
-    try:
-        if "&" in text:
-            text = text.replace("&", "&amp;")
-        # if "<" in text:
-            # text = text.replace("<", "&lt;")
-        # if ">" in text:
-            # text = text.replace(">", "&gt;")
-        return text
-    except TypeError:
-        raise TypeError(
-            "cannot serialize %r (type %s)" % (text, type(text).__name__)
-        )
-
-ET._escape_cdata = _escape_cdata
 
 no_process_found_msg="No processes found containing PopupQuestions"
 
@@ -83,9 +68,9 @@ class BasePopupReplacer(object):
                 self.import_new_popup()
                 self.replace_popup(self.base_process_def,popup_question_node,"MessageDialog")
 
-            self.base_process_def.save()
 
         if popups:
+            self.base_process_def.save()
             result.append(self.base_process_def)
             self.logger.info("Replacing "+str(len(popups))+" popup(s) for '"+self.base_process_def.filepath+"'")
         return result
