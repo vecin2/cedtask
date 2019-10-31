@@ -3,70 +3,70 @@
 <PackageEntry>
       <ImportDeclaration name="MessageDialog">
         <PackageSpecifier name="">
-          <PackageName name="FrameworkCommon" />
-          <PackageName name="API" />
-          <PackageName name="PopUpQuestion" />
+          <PackageName name="FrameworkCommon"></PackageName>
+          <PackageName name="API"></PackageName>
+          <PackageName name="PopUpQuestion"></PackageName>
         </PackageSpecifier>
-        <PackageEntryReference name="MessageDialog" />
+        <PackageEntryReference name="MessageDialog"></PackageEntryReference>
       </ImportDeclaration>
       <ProcessDefinition appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="SimpleValidationQuestionPopup" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
         <InstanceFields>
           <StringField designNotes="" isAttribute="false" length="0" name="oneField">
             <StringField_loc locale="">
-              <Format />
+              <Format></Format>
             </StringField_loc>
           </StringField>
         </InstanceFields>
         <InstanceProcedures name="">
-          <Procedure name="oneProcedure" nested="true" />
+          <Procedure name="oneProcedure" nested="true"></Procedure>
         </InstanceProcedures>
-        <StartNode displayName="" name="" x="22" y="48" />
-        <EndNode displayName="" name="" x="342" y="48" />
+        <StartNode displayName="" name="" x="22" y="48"></StartNode>
+        <EndNode displayName="" name="" x="342" y="48"></EndNode>
         <ChildProcess displayName="" executeAsAsynchronous="false" name="noCustomersFound" waitOnParent="false" x="198" y="48">
-          <ProcessDefinitionReference name="MessageDialog" />
+          <ProcessDefinitionReference name="MessageDialog"></ProcessDefinitionReference>
         </ChildProcess>
         <Transition isExceptionTransition="false">
-          <StartNodeReference name="" />
-          <ToNode name="noCustomersFound" />
+          <StartNodeReference name=""></StartNodeReference>
+          <ToNode name="noCustomersFound"></ToNode>
           <GraphNodeList name="">
-            <GraphNode icon="" isLabelHolder="true" label="" name="" x="134" y="48" />
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="134" y="48"></GraphNode>
           </GraphNodeList>
         </Transition>
         <Transition isExceptionTransition="false" name="transition0">
-          <FromNode name="noCustomersFound" />
-          <EndNodeReference name="" />
+          <FromNode name="noCustomersFound"></FromNode>
+          <EndNodeReference name=""></EndNodeReference>
           <GraphNodeList name="">
-            <GraphNode icon="" isLabelHolder="true" label="" name="" x="262" y="48" />
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="262" y="48"></GraphNode>
           </GraphNodeList>
         </Transition>
-        <BuilderInfo name="" />
-        <TopicScope defineTopicScope="false" name="" />
-        <ThisNode displayName="" name="fieldStore0" x="148" y="128" />
+        <BuilderInfo name=""></BuilderInfo>
+        <TopicScope defineTopicScope="false" name=""></TopicScope>
+        <ThisNode displayName="" name="fieldStore0" x="148" y="128"></ThisNode>
         <DataFlow>
-          <FromNode name="fieldStore0" />
-          <ToNode name="noCustomersFound" />
+          <FromNode name="fieldStore0"></FromNode>
+          <ToNode name="noCustomersFound"></ToNode>
           <DataFlowEntry>
             <FromField>
               <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
-                <Verbatim fieldName="text"><![CDATA["The search criteria retrieved no Customers"]]></Verbatim>
+                <Verbatim fieldName="text">"The search criteria retrieved no Customers"</Verbatim>
               </ParameterAssignment>
             </FromField>
             <ToField>
-              <FieldDefinitionReference name="line1" />
+              <FieldDefinitionReference name="line1"></FieldDefinitionReference>
             </ToField>
           </DataFlowEntry>
           <DataFlowEntry>
             <FromField>
               <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
-                <Verbatim fieldName="text"><![CDATA[MessageDialog.ERROR_TYPE]]></Verbatim>
+                <Verbatim fieldName="text">MessageDialog.ERROR_TYPE</Verbatim>
               </ParameterAssignment>
             </FromField>
             <ToField>
-              <FieldDefinitionReference name="messageType" />
+              <FieldDefinitionReference name="messageType"></FieldDefinitionReference>
             </ToField>
           </DataFlowEntry>
           <GraphNodeList name="">
-            <GraphNode icon="" isLabelHolder="true" label="" name="" x="198" y="128" />
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="198" y="128"></GraphNode>
           </GraphNodeList>
         </DataFlow>
       </ProcessDefinition>

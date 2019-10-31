@@ -74,7 +74,7 @@ class BaseProcessDefinition(object):
         header=('<?xml version="1.0" encoding="UTF-8"?>\n'
                 '<!DOCTYPE '+self.doc_type+' [] >\n')
         indent(self.root,2)
-        root_str=ET.tostring(self.root,encoding='unicode')
+        root_str=ET.tostring(self.root,pretty_print=True,encoding='unicode')
         xml_doc=header +root_str
         with open(self.filepath,"w") as xml_file:
             xml_file.write(xml_doc)

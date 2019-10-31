@@ -9,7 +9,7 @@
         </PackageSpecifier>
         <PackageEntryReference name="MessageDialog"/>
       </ImportDeclaration>
-      <ProcessDefinition appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="SimpleValidationQuestionPopup" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
+      <ProcessDefinition appearsInHistory="true" cyclic="false" designNotes="Undefined" exceptionStrategy="1" icon="" isPrivate="false" logicalDatabaseConnection="" name="SimpleValidationErrorQuestionPopup" nested="false" pointOfNoReturn="false" transactionBehaviour="TX_NOT_SUPPORTED" version="10" waitOnChildren="false">
         <InstanceFields>
           <StringField designNotes="" isAttribute="false" length="0" name="oneField">
             <StringField_loc locale="">
@@ -25,20 +25,6 @@
         <ChildProcess displayName="" executeAsAsynchronous="false" name="noCustomersFound" waitOnParent="false" x="198" y="48">
           <ProcessDefinitionReference name="MessageDialog"/>
         </ChildProcess>
-        <ProcedureCall builtIn="false" classMethod="false" displayName="" methodName="oneProcedure" name="oneProcedure" resultType="" type="ProcessDefinition" x="305" y="106">
-          <RecordDefinitionReference name="SimpleValidationQuestionPopup" nested="false"/>
-          <ObjectField designNotes="The perspective." isAggregate="false" isAttribute="false" name="perspective">
-            <ObjectField_loc locale="">
-              <Format/>
-            </ObjectField_loc>
-            <TypeDefinitionReference name="EIPerspective" nested="false"/>
-          </ObjectField>
-          <IntegerField designNotes="The index at which the perspective is running." isAttribute="false" name="perspectiveIndex">
-            <IntegerField_loc locale="">
-              <Format/>
-            </IntegerField_loc>
-          </IntegerField>
-        </ProcedureCall>
         <Transition isExceptionTransition="false">
           <StartNodeReference name=""/>
           <ToNode name="noCustomersFound"/>
@@ -48,16 +34,9 @@
         </Transition>
         <Transition isExceptionTransition="false" name="transition0">
           <FromNode name="noCustomersFound"/>
-          <ToNode name="oneProcedure"/>
-          <GraphNodeList name="">
-            <GraphNode icon="" isLabelHolder="true" label="" name="" x="262" y="48"/>
-          </GraphNodeList>
-        </Transition>
-        <Transition isExceptionTransition="false" name="transition1">
-          <FromNode name="oneProcedure"/>
           <EndNodeReference name=""/>
           <GraphNodeList name="">
-            <GraphNode icon="" isLabelHolder="true" label="" name="" x="320" y="80"/>
+            <GraphNode icon="" isLabelHolder="true" label="" name="" x="262" y="48"/>
           </GraphNodeList>
         </Transition>
         <BuilderInfo name=""/>
@@ -79,7 +58,7 @@
           <DataFlowEntry>
             <FromField>
               <ParameterAssignment exceptionStrategy="0" language="EcmaScript" name="" version="">
-                <Verbatim fieldName="text"><![CDATA[MessageDialog.INFORMATION_TYPE]]></Verbatim>
+                <Verbatim fieldName="text"><![CDATA[MessageDialog.ERROR_TYPE]]></Verbatim>
               </ParameterAssignment>
             </FromField>
             <ToField>

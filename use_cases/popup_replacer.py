@@ -5,6 +5,22 @@ import lxml.etree as ET
 import logging
 from logging.handlers import RotatingFileHandler
 
+def _escape_cdata(text):
+    try:
+        if "&" in text:
+            text = text.replace("&", "&amp;")
+        # if "<" in text:
+            # text = text.replace("<", "&lt;")
+        # if ">" in text:
+            # text = text.replace(">", "&gt;")
+        return text
+    except TypeError:
+        raise TypeError(
+            "cannot serialize %r (type %s)" % (text, type(text).__name__)
+        )
+
+ET._escape_cdata = _escape_cdata
+
 no_process_found_msg="No processes found containing PopupQuestions"
 
 def make_data_flow_entry(data_flow,cdata,field_definition_ref):
@@ -21,7 +37,7 @@ def make_data_flow_entry(data_flow,cdata,field_definition_ref):
     verbatim=ET.SubElement(parameter_assigment,
                            "Verbatim",
                            fieldName="text")
-    verbatim.text ="<![CDATA["+cdata+"]]>"
+    verbatim.text =ET.CDATA(cdata)
     to_field=ET.SubElement(data_flow_entry,"ToField")
     to_field=ET.SubElement(to_field,
                            "FieldDefinitionReference",

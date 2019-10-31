@@ -54,9 +54,10 @@
           x="342"
           y="48" />
       <ChildProcess
-          displayName=""
+          designNotes="? No Design Notes ?"
+          displayName="messageDialogDisplay"
           executeAsAsynchronous="false"
-          name="messageDialog"
+          name="messageDialogDisplay"
           waitOnParent="false"
           x="192"
           y="48">
@@ -64,12 +65,17 @@
             name="MessageDialog"
             nested="false" />
       </ChildProcess>
+      <ThisNode
+          displayName=""
+          name="fieldStore0"
+          x="64"
+          y="144" />
       <Transition
           isExceptionTransition="false">
         <StartNodeReference
             name="" />
         <ToNode
-            name="messageDialog" />
+            name="messageDialogDisplay" />
         <GraphNodeList
             name="">
           <GraphNode
@@ -85,7 +91,7 @@
           isExceptionTransition="false"
           name="transition0">
         <FromNode
-            name="messageDialog" />
+            name="messageDialogDisplay" />
         <EndNodeReference
             name="" />
         <GraphNodeList
@@ -99,6 +105,58 @@
               y="48" />
         </GraphNodeList>
       </Transition>
+      <DataFlow>
+        <FromNode
+            name="fieldStore0" />
+        <ToNode
+            name="messageDialogDisplay" />
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA[MessageDialog.INFORMATION_TYPE]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="messageType" />
+          </ToField>
+        </DataFlowEntry>
+        <DataFlowEntry>
+          <FromField>
+            <ParameterAssignment
+                exceptionStrategy="0"
+                language="EcmaScript"
+                name=""
+                version="">
+              <Verbatim
+                  fieldName="text">
+<![CDATA["The search criteria retrieved no Customers"]]>
+              </Verbatim>
+            </ParameterAssignment>
+          </FromField>
+          <ToField>
+            <FieldDefinitionReference
+                name="line1" />
+          </ToField>
+        </DataFlowEntry>
+        <GraphNodeList
+            name="">
+          <GraphNode
+              icon=""
+              isLabelHolder="true"
+              label=""
+              name=""
+              x="192"
+              y="128" />
+        </GraphNodeList>
+      </DataFlow>
       <BuilderInfo
           name="" />
       <TopicScope

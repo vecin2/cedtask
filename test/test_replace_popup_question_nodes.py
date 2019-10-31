@@ -15,7 +15,7 @@ no_process_found_msg="No processes found containing PopupQuestions"
 def cleandir():
     try:
         script_dir =os.path.dirname(__file__)
-        rmtree(script_dir+"/tmp")
+        #rmtree(script_dir+"/tmp")
     except OSError:
         pass
 
@@ -87,7 +87,7 @@ def test_replaces_one_popup():
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    text='<![CDATA["The search criteria retrieved no Customers"]]>'
+    text='"The search criteria retrieved no Customers"'
     assert text==\
             verbatim.text.strip()
     message_type = data_flow_entries[1].find("FromField")
@@ -98,7 +98,7 @@ def test_replaces_one_popup():
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '<![CDATA[MessageDialog.INFORMATION_TYPE]]>' ==\
+    assert 'MessageDialog.INFORMATION_TYPE' ==\
             verbatim.text.strip()
 
     line1 = data_flow.find("DataFlowEntry").find("ToField")
@@ -170,7 +170,7 @@ def test_replace_error_popup():
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '<![CDATA["The search criteria retrieved no Customers"]]>' ==\
+    assert '"The search criteria retrieved no Customers"' ==\
             verbatim.text.strip()
     message_type = data_flow_entries[1].find("FromField")
     parameter_assigment =message_type.find("ParameterAssignment")
@@ -180,7 +180,7 @@ def test_replace_error_popup():
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '<![CDATA[MessageDialog.ERROR_TYPE]]>' ==\
+    assert 'MessageDialog.ERROR_TYPE' ==\
             verbatim.text.strip()
 
 @pytest.mark.usefixtures("cleandir")
@@ -244,7 +244,7 @@ def test_replace_formProcess_popup():
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '<![CDATA["Please make sure you password is correct"]]>' ==\
+    assert '"Please make sure you password is correct"' ==\
             verbatim.text.strip()
     message_type = data_flow_entries[1].find("FromField")
     parameter_assigment =message_type.find("ParameterAssignment")
@@ -254,7 +254,7 @@ def test_replace_formProcess_popup():
     assert "" == parameter_assigment.get("version")
     verbatim =parameter_assigment.find("Verbatim")
     assert "text" == verbatim.get("fieldName")
-    assert '<![CDATA[MessageDialog.ERROR_TYPE]]>' ==\
+    assert 'MessageDialog.ERROR_TYPE' ==\
             verbatim.text.strip()
 
 @pytest.mark.usefixtures("cleandir")
